@@ -9,3 +9,4 @@ pypi==2.1
 setuptools==75.8.0
 sqlparse==0.5.3
 webencodings==0.5.1
+whitenoise==5.3.0
