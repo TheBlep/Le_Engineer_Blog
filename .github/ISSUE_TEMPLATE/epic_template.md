@@ -1,6 +1,5 @@
 
 ---
-
 name: Feature
 about: A new feature request.
 title: User-Story title
