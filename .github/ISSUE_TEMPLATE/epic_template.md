@@ -1,8 +1,7 @@
-
 ---
 name: Feature
 about: A new feature request.
-title: User-Story title
+title: Feature title
 labels: ["feature"]
 
 ---
