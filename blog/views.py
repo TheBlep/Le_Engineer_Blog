@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.contrib import messages
-from .models import Post, Comment
-from .forms import CollaborateForm
+from .models import Post, Comment, About, CollaborateRequest
+from .forms import CollaborateForm, CommentForm
 
 # Create your views here.
 class PostList(generic.ListView):

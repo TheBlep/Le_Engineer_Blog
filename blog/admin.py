@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, About, CollaborateRequest
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post) #this is a decorator
