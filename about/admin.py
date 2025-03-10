@@ -19,4 +19,4 @@ class CollaborateRequestAdmin(admin.ModelAdmin):
 
     list_display = ('message', 'read',)
 
-admin.site.register(Comment)
+#admin.site.register(Comment)
