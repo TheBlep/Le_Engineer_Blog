@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.contrib import messages
-from .models import Post, Comment, About, CollaborateRequest
-from .forms import CollaborateForm, CommentForm
+from .models import Post, Comment
+from .forms import CommentForm
 
 # Create your views here.
 class PostList(generic.ListView):
@@ -57,16 +57,3 @@ def post_detail(request, slug):
             "comment_form": comment_form,
         },
     )	
-
-def about_me(request):
-    about = About.objects.all().order_by('-updated_on').first()
-    collaborate_form = CollaborateForm()
-
-    return render(
-        request,
-        "about/about.html",
-        {
-            "about": about,
-            "collaborate_form": collaborate_form
-        },
-    )
