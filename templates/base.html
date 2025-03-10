@@ -1,5 +1,8 @@
 {% load static %}
 {% url 'home' as home_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -40,8 +43,22 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="#">Home</a>
+                            href="{% url 'home' %}">Home</a>
                     </li>
+
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
 
                 </ul>
                 <span class="navbar-text text-muted">
@@ -50,9 +67,28 @@
             </div>
         </div>
     </nav>
+    <!-- displaying Django messages -->
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible
+            fade show" id="msg" role="alert">
+            {{ message | safe }}
+            <button type="button" class="btn-close"
+                data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+    </div>
 
     <main class="flex-shrink-0 main-bg">
-
+        {% if user.is_authenticated %}
+            <p class="text-end m-3">You are logged in as {{ user }}</p>
+            {% else %}
+            <p class="text-end m-3">You are not logged in</p>
+            {% endif %}
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
@@ -61,7 +97,7 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
+        <p class="m-0 text-center text-white">Copyright 2025 Leon</p>
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
