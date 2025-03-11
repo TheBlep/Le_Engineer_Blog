@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django_summernote',
+    'faq',
     'cloudinary',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -62,7 +63,10 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     "blog",
     "about",
+    
 ]
+
+FAQ_SETTINGS = []
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
@@ -90,6 +94,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [TEMPLATES_DIR], #os.path.join(BASE_DIR, 'templates')
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,7 +127,7 @@ DATABASES = {
 if 'test' in sys.argv:
     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
-    
+
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com"
