@@ -20,8 +20,10 @@ from django.urls import path, include
 
 
 urlpatterns = [
+    #path("", views.faq_view, name='faq'),
+    #path("faq/", include("faq.urls"), name="faq-urls"),
+    path("faq/", include("faq.urls")),  # Include the URLs from django-easy-faq
     path("about/", include("about.urls"), name="about-urls"),
-    path("faq/", include("faq.urls")),
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django_summernote',
     'faq',
+    'django_extensions',
     'cloudinary',
     'django.contrib.sessions',
     'django.contrib.messages',

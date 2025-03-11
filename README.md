@@ -406,6 +406,10 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 - [Coolors](https://coolors.co/)
     * Creating color pallettes.
 
+## Apps
+- [django-easy-faq](https://github.com/smark-1/django-easy-faq)
+    * For the FAQ page Django app.
+
 ----
 
 # Testing
