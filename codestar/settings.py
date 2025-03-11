@@ -66,7 +66,7 @@ INSTALLED_APPS = [
     
 ]
 
-FAQ_SETTINGS = []
+FAQ_SETTINGS = ['no_category_description', 'no_category',]
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
