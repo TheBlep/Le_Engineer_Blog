@@ -1,7 +1,7 @@
 <div class="container">
     <h3 class="text-center">Comments</h3>
     {% for comment in question.faqcomment_set.all %}
-        <div class="w-75 p-4 rounded-3 bg-body-tertiary m-auto border mt-3">
+        <div class="w-75 p-4 rounded-3 bg-body-tertiary m-auto border mt-3 text-dark">
             <h4>{{comment.comment}}</h4>
             posted by {% if comment.user%}{{comment.user}}{% else %}anonymous{% endif %} {{comment.post_time|timesince}} ago
         </div>
