@@ -13,6 +13,7 @@ Django==4.2.19
 django-allauth==0.57.2
 django-crispy-forms==2.3
 django-easy-faq==1.9
+django-extensions==3.2.3
 django-summernote==0.8.20.0
 gunicorn==20.1.0
 idna==3.10
