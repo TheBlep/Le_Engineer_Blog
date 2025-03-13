@@ -22,24 +22,25 @@
     </div> -->
     <!-- <div class="row">
         <div class="col text-right"> -->
-          <!-- Updated on field goes in here -->
-    
-          <!-- <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+    <!-- Updated on field goes in here -->
+
+    <!-- <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
     </div> -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 my-5">
             <h2>Let's collaborate!</h2>
-            <p>Engineering thrives on shared knowledge and collaboration. Whether you have a project idea, want to co-author an article, or just feel like brainstorming, I’d love to connect. Fill out the form, and let’s start building something great together!</p>
+            <p>Engineering thrives on shared knowledge and collaboration. Whether you have a project idea, want to
+                co-author an article, or just feel like brainstorming, I’d love to connect. Fill out the form, and let’s
+                start building something great together!</p>
 
             <!-- add your form here. Your submit button should 
                                 have the classes of btn, btn-secondary -->
             <form method="post">
                 {{ collaborate_form | crispy }}
                 {% csrf_token %}
-                <button class="btn btn-secondary"
-                    type="submit">Submit</button>
-                </form>
+                <button class="btn btn-secondary" type="submit">Submit</button>
+            </form>
         </div>
     </div>
 </div>

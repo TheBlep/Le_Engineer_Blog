@@ -5,69 +5,82 @@
 <h3 class="text-center justify-content-center">Answers</h3>
 <div class="row justify-content-center mb-4 mt-4">
     {% for answer in question.answer_set.all %}
-        <div class="col-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{answer.answer}}</h5>
-                </div>
-                {% if can_vote_answer %}
-                    <div class="card-footer text-body-secondary">
-                        found this helpful?
-                        <form style="display: inline;" action="{% if category_enabled %}{% url 'faq:vote_answer' question.category.slug question.slug answer.slug %}{% else %}{% url 'faq:vote_answer' question.slug answer.slug %}{% endif %}" method="post">
-                            {% csrf_token %}
-                            <input type="hidden" value=True name="vote">
-                            <button type="submit" class="btn btn-link btn-sm"><i class="bi bi-hand-thumbs-up"></i>{{answer.helpful}}</button>
-                        </form>
-                        <form style="display: inline;" action="{% if category_enabled %}{% url 'faq:vote_answer' question.category.slug question.slug answer.slug %}{% else %}{% url 'faq:vote_answer' question.slug answer.slug %}{% endif %}" method="post">
-                            {% csrf_token %}
-                            <input type="hidden" value=False name="vote">
-                            <button type="submit" class="btn btn-link btn-sm"><i class="bi bi-hand-thumbs-down"></i>{{answer.not_helpful}}</button>
-                        </form>
-                    </div>
-                {% endif %}
+    <div class="col-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{answer.answer}}</h5>
             </div>
+            {% if can_vote_answer %}
+            <div class="card-footer text-body-secondary">
+                found this helpful?
+                <form style="display: inline;"
+                    action="{% if category_enabled %}{% url 'faq:vote_answer' question.category.slug question.slug answer.slug %}{% else %}{% url 'faq:vote_answer' question.slug answer.slug %}{% endif %}"
+                    method="post">
+                    {% csrf_token %}
+                    <input type="hidden" value=True name="vote">
+                    <button type="submit" class="btn btn-link btn-sm"><i
+                            class="bi bi-hand-thumbs-up"></i>{{answer.helpful}}</button>
+                </form>
+                <form style="display: inline;"
+                    action="{% if category_enabled %}{% url 'faq:vote_answer' question.category.slug question.slug answer.slug %}{% else %}{% url 'faq:vote_answer' question.slug answer.slug %}{% endif %}"
+                    method="post">
+                    {% csrf_token %}
+                    <input type="hidden" value=False name="vote">
+                    <button type="submit" class="btn btn-link btn-sm"><i
+                            class="bi bi-hand-thumbs-down"></i>{{answer.not_helpful}}</button>
+                </form>
+            </div>
+            {% endif %}
         </div>
-    {% endfor %}
     </div>
+    {% endfor %}
+</div>
 <div class="container mt-5">
     <div class="row">
         <div class="col text-right">
             {% else %}
-                {% if question.answer_set.exists %}
-                    <p class="text-center">Answer:</p>
-                    <h3 class="text-center">{{question.answer_set.first.answer}}</h3>
-                    {% if can_vote_answer %}
-                    Found this answer helpful?
-                    <form style="display: inline;" action="{% if category_enabled %}{% url 'faq:vote_answer' question.category.slug question.slug question.answer_set.first.slug %}{% else %}{% url 'faq:vote_answer' question.slug question.answer_set.first.slug %}{% endif %}" method="post">
-                        {% csrf_token %}
-                        <input type="hidden" value=True name="vote">
-                        <button type="submit" class="btn btn-link btn-sm"><i class="bi bi-hand-thumbs-up"></i> {{question.answer_set.first.helpful}}</button>
-                    </form>
-                    <form style="display: inline;" action="{% if category_enabled %}{% url 'faq:vote_answer' question.category.slug question.slug question.answer_set.first.slug %}{% else %}{% url 'faq:vote_answer' question.slug question.answer_set.first.slug %}{% endif %}" method="post">
-                        {% csrf_token %}
-                        <input type="hidden" value=False name="vote">
-                        <button type="submit" class="btn btn-link btn-sm"><i class="bi bi-hand-thumbs-down"></i> {{question.answer_set.first.not_helpful}}</button>
-                    </form>
-                    {% endif %}
-                {% else %}
-                    no answers yet
-                {% endif %}
+            {% if question.answer_set.exists %}
+            <p class="text-center">Answer:</p>
+            <h3 class="text-center">{{question.answer_set.first.answer}}</h3>
+            {% if can_vote_answer %}
+            Found this answer helpful?
+            <form style="display: inline;"
+                action="{% if category_enabled %}{% url 'faq:vote_answer' question.category.slug question.slug question.answer_set.first.slug %}{% else %}{% url 'faq:vote_answer' question.slug question.answer_set.first.slug %}{% endif %}"
+                method="post">
+                {% csrf_token %}
+                <input type="hidden" value=True name="vote">
+                <button type="submit" class="btn btn-link btn-sm"><i class="bi bi-hand-thumbs-up"></i>
+                    {{question.answer_set.first.helpful}}</button>
+            </form>
+            <form style="display: inline;"
+                action="{% if category_enabled %}{% url 'faq:vote_answer' question.category.slug question.slug question.answer_set.first.slug %}{% else %}{% url 'faq:vote_answer' question.slug question.answer_set.first.slug %}{% endif %}"
+                method="post">
+                {% csrf_token %}
+                <input type="hidden" value=False name="vote">
+                <button type="submit" class="btn btn-link btn-sm"><i class="bi bi-hand-thumbs-down"></i>
+                    {{question.answer_set.first.not_helpful}}</button>
+            </form>
+            {% endif %}
+            {% else %}
+            no answers yet
+            {% endif %}
             {% endif %}
 
 
             {% if can_answer_question %}
-                {% if category_enabled %}
-                    <a class="btn btn-primary" href="{% url 'faq:answer_question' question.category.slug question.slug %}">answer question</a>
-                {% else %}
-                    <a class="btn btn-primary" href="{% url 'faq:answer_question' question.slug %}">answer question</a>
-                {% endif %}
+            {% if category_enabled %}
+            <a class="btn btn-primary"
+                href="{% url 'faq:answer_question' question.category.slug question.slug %}">answer question</a>
+            {% else %}
+            <a class="btn btn-primary" href="{% url 'faq:answer_question' question.slug %}">answer question</a>
+            {% endif %}
             {% endif %}
         </div>
     </div>
 </div>
 <hr>
 {% if comments_allowed %}
-    {% include 'faq/comments.html' %}
+{% include 'faq/comments.html' %}
 {% endif %}
 
 {% endblock %}

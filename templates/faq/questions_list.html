@@ -6,19 +6,19 @@
     <h2 class="text-center">All manner of populare questions:</h2>
     <div>
         {% for question in questions %}
-            <div class="col-12 sm-6 mb-3 mb-sm-0 mt-3">
-                
-                <div class="card">
-                    <div class="card-body">
-                        <h3><a href="{% url 'faq:question_detail' question.slug %}">{{question.question}}</a></h3>
-                    </div>
+        <div class="col-12 sm-6 mb-3 mb-sm-0 mt-3">
+
+            <div class="card">
+                <div class="card-body">
+                    <h3><a href="{% url 'faq:question_detail' question.slug %}">{{question.question}}</a></h3>
                 </div>
             </div>
+        </div>
         {% endfor %}
     </div>
     {% if can_add_question %}
-        <hr>
-        <a href="{% url 'faq:add_question' %}">add question</a>
+    <hr>
+    <a href="{% url 'faq:add_question' %}">add question</a>
     {% endif %}
 </div>
 {% endblock %}

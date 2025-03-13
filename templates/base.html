@@ -23,10 +23,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-    rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-        
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -37,8 +37,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">The <span class="red-o">Le</span>Eneer<span
-                        class="thin"> Blog</span></span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">The <span
+                        class="red-o">Le</span>Eneer<span class="thin"> Blog</span></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,8 +50,8 @@
                             href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == about_url %}active" aria-current="about page{% endif %}"
-                            href="{% url 'about' %}">Collaborate</a>
+                        <a class="nav-link {% if request.path == about_url %}active"
+                            aria-current="about page{% endif %}" href="{% url 'about' %}">Collaborate</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == faq_url %}active" aria-current="faq page{% endif %}"
@@ -60,15 +60,17 @@
 
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active" aria-current="logout page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% if request.path == logout_url %}active"
+                            aria-current="logout page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active" aria-current="signup page{% endif %}"
-                            href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link {% if request.path == signup_url %}active"
+                            aria-current="signup page{% endif %}" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active" aria-current="login page{% endif %}" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% if request.path == login_url %}active"
+                            aria-current="login page{% endif %}" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
 
@@ -82,25 +84,24 @@
     <!-- displaying Django messages -->
     <div class="container">
         <div class="row">
-        <div class="col-md-8 offset-md-2">
-            {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible
             fade show" id="msg" role="alert">
-            {{ message | safe }}
-            <button type="button" class="btn-close"
-                data-bs-dismiss="alert" aria-label="Close"></button>
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
         </div>
     </div>
 
     <main class="flex-shrink-0 main-bg">
         {% if user.is_authenticated %}
-            <p class="text-end m-3">You are logged in as {{ user }}</p>
-            {% else %}
-            <p class="text-end m-3">You are not logged in</p>
-            {% endif %}
+        <p class="text-end m-3">You are logged in as {{ user }}</p>
+        {% else %}
+        <p class="text-end m-3">You are not logged in</p>
+        {% endif %}
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
@@ -110,7 +111,8 @@
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">Copyright 2025 Leon</p>
-        <p class="m-0 text-center text-white">Follow us: <a href="https://www.facebook.com/" class="fab fa-facebook-square ms-3"></a>
+        <p class="m-0 text-center text-white">Follow us: <a href="https://www.facebook.com/"
+                class="fab fa-facebook-square ms-3"></a>
             <a href="https://twitter.com/" class="fab fa-twitter-square ms-3"></a>
             <a href="https://www.instagram.com/" class="fab fa-instagram-square ms-3"></a>
             <a href="https://www.youtube.com/" class="fab fa-youtube-square ms-3"></a>
@@ -119,8 +121,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-        </script>
-    
+    </script>
+
     {% block extras %}
     {% endblock %}
 </body>
