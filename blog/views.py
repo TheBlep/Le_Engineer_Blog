@@ -5,49 +5,29 @@ from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
 
-# Create your views here.
+# Class-based view to list posts
 class PostList(generic.ListView):
-	queryset = Post.objects.filter(author=1)
-	template_name = "blog/index.html"
-	paginate_by = 6
+    queryset = Post.objects.filter(author=1)  # Filter posts by author ID 1
+    template_name = "blog/index.html"  # Template to render
+    paginate_by = 6  # Number of posts per page
 
+# View to display a single post and handle comments
 def post_detail(request, slug):
-    """
-    Display an individual :model:`blog.Post`.
+    queryset = Post.objects.filter(status=1)  # Filter published posts
+    post = get_object_or_404(queryset, slug=slug)  # Get post or 404
+    comments = post.comments.all().order_by("-created_on")  # Get comments, newest first
+    comment_count = post.comments.filter(approved=True).count()  # Count approved comments
 
-    **Context**
-
-    ``post``
-        An instance of :model:`blog.Post`.
-
-    **Template:**
-
-    :template:`blog/post_detail.html`
-    """
-    if request.method == "POST":
-        print("Received a POST request")
-
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
-    comments = post.comments.all().order_by("-created_on")
-    comment_count = post.comments.filter(approved=True).count()
-
-    if request.method == "POST":
-        
+    if request.method == "POST":  # Handle comment submission
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
-            comment.author = request.user
-            comment.post = post
+            comment.author = request.user  # Set comment author
+            comment.post = post  # Associate comment with post
             comment.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Comment submitted and awaiting approval'
-            )
+            messages.success(request, 'Comment submitted and awaiting approval')
 
-    comment_form = CommentForm()
-
-    print("About to render template")
+    comment_form = CommentForm()  # Empty form for new comments
 
     return render(
         request,
@@ -58,45 +38,37 @@ def post_detail(request, slug):
             "comment_count": comment_count,
             "comment_form": comment_form,
         },
-    )	
+    )
 
-
+# View to edit a comment
 def comment_edit(request, slug, comment_id):
-    """
-    view to edit comments
-    """
     if request.method == "POST":
-
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        comment = get_object_or_404(Comment, pk=comment_id)
-        comment_form = CommentForm(data=request.POST, instance=comment)
+        post = get_object_or_404(queryset, slug=slug)  # Get post
+        comment = get_object_or_404(Comment, pk=comment_id)  # Get comment
+        comment_form = CommentForm(data=request.POST, instance=comment)  # Populate form with comment data
 
-        if comment_form.is_valid() and comment.author == request.user:
+        if comment_form.is_valid() and comment.author == request.user:  # Validate form and user
             comment = comment_form.save(commit=False)
             comment.post = post
-            comment.approved = False
+            comment.approved = False  # Reset approval status
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+            messages.success(request, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.error(request, 'Error updating comment!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))  # Redirect to post detail
 
-
+# View to delete a comment
 def comment_delete(request, slug, comment_id):
-    """
-    view to delete comment
-    """
     queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
-    comment = get_object_or_404(Comment, pk=comment_id)
-        
-        #  Prevents malicious HTTP requests 
-    if comment.author == request.user:
-        comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
-    else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+    post = get_object_or_404(queryset, slug=slug)  # Get post
+    comment = get_object_or_404(Comment, pk=comment_id)  # Get comment
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    if comment.author == request.user:  # Ensure user owns the comment
+        comment.delete()
+        messages.success(request, 'Comment deleted!')
+    else:
+        messages.error(request, 'You can only delete your own comments!')
+
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))  # Redirect to post detail

@@ -1,5 +1,5 @@
 """
-URL configuration for codestar project.
+URL configuration for Le_Engineer project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -20,8 +20,6 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    #path("", views.faq_view, name='faq'),
-    #path("faq/", include("faq.urls"), name="faq-urls"),
     path("faq/", include("faq.urls")),  # Include the URLs from django-easy-faq
     path("about/", include("about.urls"), name="about-urls"),
     path("accounts/", include("allauth.urls")),

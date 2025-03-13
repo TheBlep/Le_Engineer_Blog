@@ -3,7 +3,6 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
-<!-- {% url 'faq' as questions_list_url %} -->
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -12,12 +11,12 @@
     <title>The Le_Eneer Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Google Fonts CSS -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome CSS -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- Bootstrap CSS -->
@@ -27,18 +26,18 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <!-- Custom CSS -->
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">The <span
-                        class="red-o">Le</span>Eneer<span class="thin"> Blog</span></span></a>
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <span class="brand">The <span class="red-o">Le</span>Eneer<span class="thin"> Blog</span></span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -59,11 +58,13 @@
                     </li>
 
                     {% if user.is_authenticated %}
+                    <!-- Show Logout option if user is logged in -->
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active"
                             aria-current="logout page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
+                    <!-- Show Register and Login options if user is not logged in -->
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == signup_url %}active"
                             aria-current="signup page{% endif %}" href="{% url 'account_signup' %}">Register</a>
@@ -73,7 +74,6 @@
                             aria-current="login page{% endif %}" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
-
                 </ul>
                 <span class="red-e">
                     Prototyping for Engineers
@@ -81,13 +81,13 @@
             </div>
         </div>
     </nav>
-    <!-- displaying Django messages -->
+
+    <!-- Displaying Django Messages -->
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible
-            fade show" id="msg" role="alert">
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                     {{ message | safe }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
@@ -102,28 +102,30 @@
         {% else %}
         <p class="text-end m-3">You are not logged in</p>
         {% endif %}
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
 
+        {% block content %}
+        <!-- Dynamic content block for individual pages -->
+        {% endblock content %}
     </main>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">Copyright 2025 Leon</p>
-        <p class="m-0 text-center text-white">Follow us: <a href="https://www.facebook.com/"
-                class="fab fa-facebook-square ms-3"></a>
+        <p class="m-0 text-center text-white">Follow us:
+            <a href="https://www.facebook.com/" class="fab fa-facebook-square ms-3"></a>
             <a href="https://twitter.com/" class="fab fa-twitter-square ms-3"></a>
             <a href="https://www.instagram.com/" class="fab fa-instagram-square ms-3"></a>
             <a href="https://www.youtube.com/" class="fab fa-youtube-square ms-3"></a>
         </p>
     </footer>
 
+    <!-- Bootstrap JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
 
     {% block extras %}
+    <!-- Additional scripts can be added in child templates -->
     {% endblock %}
 </body>
 
