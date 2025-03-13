@@ -3,6 +3,7 @@ from django import forms
 
 # Django models used:
 
+
 class CollaborateForm(forms.ModelForm):
     """ A form for users to submit collaboration requests.
     model --from which model this form is created:
@@ -17,6 +18,6 @@ class CollaborateForm(forms.ModelForm):
     ``message``
         The user's message or collaboration request details.
     """
-    class Meta:   
+    class Meta:
         model = CollaborateRequest
-        fields = ('name', 'email', 'message')   
+        fields = ('name', 'email', 'message')

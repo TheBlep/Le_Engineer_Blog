@@ -3,13 +3,16 @@ from django.contrib import messages
 from .models import About
 from .forms import CollaborateForm
 
-#Django views used:
+# Django views used:
+
 
 def about_me(request):
     """
-    Renders the most recent information on the website author and allows user collaberation requests
+    Renders the most recent information on the website author and allows
+    user collaberation requests
     --from which model this veiw displays data:
-    --list the two variables returnsed by the context in the veiw. and from where thy get the data
+    --list the two variables returnsed by the context in the veiw. and
+    from where thy get the data
     -- state which template is returned by this view
     Displays an indevidual instant of :model:`about:About`.
     **context**
@@ -24,7 +27,8 @@ def about_me(request):
         collaborate_form = CollaborateForm(data=request.POST)
         if collaborate_form.is_valid():
             collaborate_form.save()
-            messages.add_message(request, messages.SUCCESS, "Collaboration request received! Ill try to respond within 2 working days.")
+            messages.add_message(request, messages.SUCCESS, "Collaboration\
+             request received! Ill try to respond within 2 working days.")
     about = About.objects.all().order_by('-updated_on').first()
     collaborate_form = CollaborateForm()
 

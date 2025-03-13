@@ -3,19 +3,22 @@ from cloudinary.models import CloudinaryField
 
 # Django models used:
 
+
 class About(models.Model):
     """
     Represents information about the website author.
     --from which model this view displays data:
     --list the fields included in the model and their purpose
-    Stores details about the author, including a title, profile image, update timestamp, and content.
+    Stores details about the author, including a title, profile image,
+    update timestamp, and content.
     **Fields:**
     ``title``
         The title of the about section.
     ``profile_image``
         The profile image of the author, stored using Cloudinary.
     ``updated_on``
-        The timestamp of the last update, automatically set to the current time on save.
+        The timestamp of the last update, automatically set to the
+        current time on save.
     ``content``
         The main content or description about the author.
     """
@@ -33,7 +36,8 @@ class CollaborateRequest(models.Model):
     Represents a collaboration request submitted by a user.
     --from which model this view displays data:
     --list the fields included in the model and their purpose
-    Stores details of collaboration requests, including the user's name, email, message, and read status.
+    Stores details of collaboration requests, including the user's name,
+    email, message, and read status.
     **Fields:**
     ``name``
         The name of the user submitting the request.
@@ -42,7 +46,8 @@ class CollaborateRequest(models.Model):
     ``message``
         The user's message or collaboration request details.
     ``read``
-        A boolean flag indicating whether the request has been read (defaults to False).
+        A boolean flag indicating whether the request has been read
+        (defaults to False).
     """
     name = models.CharField(max_length=200)
     email = models.EmailField()

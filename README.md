@@ -125,51 +125,46 @@
 
 ----
 
-# UX
-## Goals
-### Visitor Goals
-The target audience for Horizon Photography are:
-- People who want to view beautiful photos.
-- People who are interested in seeing different countries.
-- People that may want to license a photo.
-- People interested in hiring a photographer.
-- People interested in the photographer's travels.
+# UX  
+## Goals  
+### Visitor Goals  
+The target audience for the **Le_Eneer engineering blog** are:  
+- Engineers and developers seeking technical insights and tutorials.  
+- Students and professionals looking to learn about engineering concepts.  
+- Individuals interested in the latest trends and innovations in engineering.  
+- Readers who want to engage with the blog's community and share ideas.  
+- Potential collaborators or employers interested in the author's expertise.  
 
-User goals are:
-- View a gallery of different photos.
-- Explore different countries on the map to see what they look like.
-- Contact the photographer.
-- Get an overview of a country's statistics.
-- Follow the photographer's journey.
+User goals are:  
+- Read high-quality, informative blog posts on engineering topics.  
+- Explore tutorials, case studies, and project walkthroughs.  
+- Contact the author for collaboration or inquiries.  
+- Stay updated with the latest posts through a newsletter or RSS feed.  
+- Engage with the content through comments or social media.  
 
-Horizon Photography fills these needs by:
-- Opening with a dramatic image and introducing the photographer immediately.
-- The map and gallery are highlighted on the main page to lead users to the images wherever they click.
-- Highlighting the Contact page in the header and footer.
-- Providing social media links to follow the photographer.
-- 500px link allows a user to license photos.
-- Providing an interactive map with an info-box that displays country info from an API
-- Showing beautiful images related to each country when clicked.
-- Utilising [EmailJS](https://www.emailjs.com/) to maintain the contact page and the newsletter.
+The Le_Eneer engineering blog fulfills these needs by:  
+- Featuring a clean, intuitive design that prioritizes content readability.  
+- Highlighting the blog posts and categories prominently on the homepage.  
+- Including a contact form for inquiries and collaboration requests.  
+- Offering social media links 
+- Using a responsive design for seamless access on all devices.  
+- Integrating a commenting system to encourage community engagement.  
 
-### Business Goals
-The Business Goals of Horizon Photography are:
-- Display and highlight the photographer's work in a unique way.
-- Gain subscribers through the newsletter.
-- Provide easy ways to communicate with the photographer.
-- Gain interest and connect with social media.
-- Connect to where the photos are sold.
+### Business Goals  
+The Business Goals of the Le_Eneer engineering blog are:  
+- Establish the author as an authority in the engineering field.  
+- Grow a loyal audience through engaging and valuable content.   
+- Provide a platform for networking and collaboration opportunities.  
+- Showcase the author's expertise to attract potential employers or clients.  
 
-### User Stories
-1. As a user interested in photography, I expect to see lots of different beautiful photos.
-0. I expect the photos to be highlighted first and foremost.
-0. As a user interested in travel, I expect to see different countries on display.
-0. As a user interested in different countries, I expect to see information on the countries.
-0. As a person interested in hiring a photographer, I expect to find an easy way to contact the photographer.
-0. I expect to hear a little about the photographer if I am interested.
-0. I expect to be able to follow the photographer through social media.
-0. I would like to be able to hear about the photographer's updates through social media.
-0. If I were interested in buying a photo, I expect to know where.
+### User Stories  
+1. As a user interested in engineering, I expect to find well-written, informative blog posts.  
+2. I expect the blog to be easy to navigate, with clear categories and search functionality.  
+3. As a student, I want to access tutorials and guides to learn new skills.  
+4. As a professional, I expect to find insights into industry trends and innovations.  
+5. As a potential collaborator, I want an easy way to contact the author.  
+6. I want to engage with the content by leaving comments or sharing posts on social media.  
+7. I expect the website to be mobile-friendly for on-the-go reading.   
 
 ## Visual Design
 ### Wireframes
@@ -420,27 +415,35 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 - CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and auto-prefixed with [CSS Autoprefixer](https://autoprefixer.github.io/).
 - Links checked with [W3C Link Checker](https://validator.w3.org/checklink).
 - Each javascript file was tested on the site for errors and functionality using the console and with [JSHint](https://jshint.com/).
+- Python Linter
+    - admin.py [All clear, no errors found]
+    - settings.py [All clear, Line-too-long-errors ignored.]
+    - about/urls.py
+    - about/models.py
+    - about/forms.py
+    - about/veiws.py
+    - blog/urls.py
+    - blog/veiws.py
+    - blog/models.py
 
 ### General Testing
 - Each feature was developed and tested in its own branch before being merged with master. Branches were subsequently deleted.
 - Each time a feature was added, all the functions were tested to see if there was an impact.
-- The site was sent to friends for feedback and testing.
+- The site was sent to friends for feedback and testing, this also allowed for different operating systems and browser testing.
 - All forms have validation and will not submit without the proper information.
-- .gitignore file has been included to prevent system file commits.
-- The image loading blur has been thoroughly tested and gone through numerous iterations to optimise the smoothness of the transition on different devices and internet speeds.
-- Backup Map functions have been tested in a local deployment.
-- Email error functions have been tested offline as well.
-- External links open in a new tab.
+- .gitignore file has been included to prevent system file commits as well as hide any sensitive information and reduce the ease of malicious attacks.
+- Image upload functions have been tested with different formats and sizes.
+- External links open in a new tab. Also being tested on multiple devices on multiple browsers.
 
 ### Mobile Testing
-- I tested the site personally on my Android device, going through the entire process, checking buttons, functions, checking out, etc. I was personally unable to test on iOS.
+- I tested the site personally on my Android device, going through every function; checking buttons, forms, logging in/out, etc. I was personally unable to test on iOS.
 - The site was sent to friends and relatives for them to follow the same process. They have tested on their devices, including iOS.
-- Chrome was utilised to inspect the site in mobile format, going through the pages and functions.
+- Duckduckgo was utilised to inspect the site in mobile format, going through the pages and functions.
 
 ### Desktop Testing
-- The site was developed on a Chromebook and, as such, the majority of testing occurred on Chrome.
+- The site was developed on a Thinkpad and the majority of testing occurred through Firefox.
 - The site was tested by friends and relatives on numerous desktop devices.
-- The site was marginally tested on other browsers, such as Firefox and Edge.
+- The site was marginally tested on other browsers, such as Firefox and Chrome.
 - Internet Explorer was not tested and the site was not developed with it in mind as support for the browser is gradually being dropped.
 
 ## Bugs

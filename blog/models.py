@@ -5,6 +5,8 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
+
+
 class Post(models.Model):
     """
     Stores a single blog post entry related to  :model:'auth.User'.
@@ -20,8 +22,10 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField()
     updated_on = models.TextField()
+
     class Meta:
         ordering = ["-created_on"]
+
     def __str__(self):
         return f"{self.title} | written by {self.author}"
 
@@ -36,7 +40,9 @@ class Comment(models.Model):
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+
     class Meta:
         ordering = ["-created_on"]
+
     def __str__(self):
         return f"Comment by {self.author} on{self.post}"
