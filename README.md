@@ -6,7 +6,7 @@
   <img src="https://user-images.githubusercontent.com/44118951/92330234-9deedd00-f06d-11ea-98af-db71c1f07342.png" alt="Home Page">
 </div>
 
-[Horizon Photography](https://ri-dearg.github.io/horizon-photo/index.html) is designed as a portfolio for a travel Photographer with an interactive map of photos as its main feature. Its goal is to highlight the photographer and to create interest in the photographer's work through an interactive exploration of different countries, instead of a static gallery. I wanted to create a certain fascination in the country, the location, that can represent a coherent idea or theme, rather than just a gallery of beautiful photos. As it is a portfolio, a minimal aesthetic has been maintained to highlight the photos, with only critical links and info displayed. While photography sites vary greatly in design, the key is putting the photos front and center, so I have cut away all extras and done just that.
+[Prototyping for Engineers](https://le-engineer-cb388e5b5656.herokuapp.com/) "Prototyping for Engineers" is an interactive blog designed to educate engineers, students, and enthusiasts on often-overlooked aspects of engineering and technology. The site prioritizes interactivity, allowing users to engage with content through discussions and comments. With a minimal, easy-to-read design featuring a dark background for eye comfort, the website ensures a distraction-free learning experience. While the content is still in development, AI-generated placeholders help structure the topics. The goal is to provide valuable insights that engineers might miss in their day-to-day work, making it a hub for continuous learning and discussion."
 
 ## Table of Contents
 1. <details open>

@@ -10,9 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-
+from decouple import config
 import os
 import sys
+
 from django.contrib.messages import constants as messages
 import dj_database_url
 from pathlib import Path
@@ -27,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-n-y2z*xk+mc$^uv73y!z+6l8wv%2_*i=s_13c^7a3a&1b!vm!_'
+SECRET_KEY = config('SECRET_KEY')
 
 # if DEBUG:
 #     SECRET_KEY = 'mysecretkey'
