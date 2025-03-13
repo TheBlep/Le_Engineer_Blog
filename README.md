@@ -413,18 +413,32 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 ### Validation
 - HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/).
 - CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and auto-prefixed with [CSS Autoprefixer](https://autoprefixer.github.io/).
+    - static/css/styles.css [All clear, no errors found]
+
 - Links checked with [W3C Link Checker](https://validator.w3.org/checklink).
+    - https://le-engineer-cb388e5b5656.herokuapp.com/ [No broken links]
+
 - Each javascript file was tested on the site for errors and functionality using the console and with [JSHint](https://jshint.com/).
+
 - Python Linter
-    - admin.py [All clear, no errors found]
-    - settings.py [All clear, Line-too-long-errors ignored.]
-    - about/urls.py
-    - about/models.py
-    - about/forms.py
-    - about/veiws.py
-    - blog/urls.py
-    - blog/veiws.py
-    - blog/models.py
+    - about/admin.py [All clear, no errors found]
+    - about/urls.py [All clear, no errors found]
+    - about/models.py [All clear, no errors found]
+    - about/forms.py [All clear, no errors found]
+    - about/veiws.py [All clear, no errors found]
+    - about/apps.py [All clear, no errors found]
+
+    - blog/urls.py [All clear, no errors found]
+    - blog/veiws.py [All clear, no errors found]
+    - blog/models.py [All clear, no errors found]
+    - blog/admin.py [All clear, no errors found]
+    - blog/apps.py [All clear, no errors found]
+    - blog/forms.py [All clear, no errors found]
+
+    - codestar/urls [All clear, no errors found]
+    - codestar/settings.py [All clear, Line-too-long errors ignored.]
+
+    - manage.py [All clear, no errors found]
 
 ### General Testing
 - Each feature was developed and tested in its own branch before being merged with master. Branches were subsequently deleted.
