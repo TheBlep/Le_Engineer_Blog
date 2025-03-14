@@ -87,7 +87,7 @@ MIDDLEWARE = [
 ]
 
 # Root URL configuration module.
-ROOT_URLCONF = 'codestar.urls'
+ROOT_URLCONF = 'le_engineer.urls'
 
 # Template configuration for rendering HTML templates.
 TEMPLATES = [
@@ -107,7 +107,7 @@ TEMPLATES = [
 ]
 
 # WSGI application entry point.
-WSGI_APPLICATION = 'codestar.wsgi.application'
+WSGI_APPLICATION = 'le_engineer.wsgi.application'
 
 # Database configuration, retrieving settings from the environment.
 DATABASES = {

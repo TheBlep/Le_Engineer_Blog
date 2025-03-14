@@ -438,8 +438,8 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
     - blog/apps.py [All clear, no errors found]
     - blog/forms.py [All clear, no errors found]
 
-    - codestar/urls [All clear, no errors found]
-    - codestar/settings.py [All clear, Line-too-long errors ignored.]
+    - le_engineer/urls [All clear, no errors found]
+    - le_engineer/settings.py [All clear, Line-too-long errors ignored.]
 
     - manage.py [All clear, no errors found]
 
