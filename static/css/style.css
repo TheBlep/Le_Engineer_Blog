@@ -13,6 +13,10 @@ body {
     .red-o {
     color: #E84610;
     }
+
+    .bright {
+    color: #D9E5D6;
+    }
     
     .red-e {
     font-family: Roboto, 'Times New Roman', Times, serif;
@@ -102,7 +106,7 @@ body {
     
     .post-link {
     text-decoration: none;
-    color: #3c6997;
+    color: #D9E5D6;
     }
     
     .post-link:hover,

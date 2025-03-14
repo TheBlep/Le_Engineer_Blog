@@ -175,48 +175,43 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
   <img src="https://user-images.githubusercontent.com/44118951/92331221-6f750000-f075-11ea-8096-288bcc957e33.png" alt="Fonts">
 </div>
 
-- The primary font, [Montserrat](https://fonts.google.com/specimen/Montserrat#standard-styles) was chosen because it is standard, plain and informative but not too rigid. It looks friendly and conversational but holds a seriousness. It is also sans-serif, making it very easily readable throughout different color schemes and complementary to the font used for Headings.
-- The secondary font, [Julius Sans One](https://fonts.google.com/specimen/Julius+Sans+One#standard-styles) was chosen because it is thin, elegant and refined yet it has flair. As a font, it gave me the impression of an art gallery. It is sans-serif, so it is clear, clean and simple, maintaining the idea of a minimalist aesthetic. It was chosen for headings as it is evident but doesn't distract, keeping the eyes more focused on the photography.
+- The primary font, [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto) was chosen because it is minimal, and easy to read while remaining refined. As a font, it gave me the impression of something utilitarian but comfortable. Being clear, clean and simple, maintaining the idea of a minimalist aesthetic. 
+- The secondary font, [Times new Roman](https://learn.microsoft.com/en-us/typography/font-list/times-new-roman) was chosen because it is standard, plain and informative but not too rigid. It looks friendly and conversational but holds a seriousness. It is also serif, making it very easily readable throughout different color schemes and complementary to the font used for the blogs.
+- Other fonts default to the system-ui CSS font family. This uses the default font of the user's operating system, providing a consistent and familiar appearance across different platforms.
 
 ### Icons
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92331590-1fe40380-f078-11ea-814b-d15b413f59aa.png" alt="Icons">
 </div>
 
-- Icons are taken from the [Fontawesome](https://fontawesome.com/) Icon library and are utilised as classes in the `<i>` tag.
-- As they are utilised as classes, they can easily be styled using other classes or IDs in the same tag. I often used Bootstrap classes to style them uniformly.
-- Icons are utilised in the footer for social account icons and the "scroll-to-top" arrow on the gallery page.
+- Icons are taken from the [Fontawesome](https://fontawesome.com/) Icon library.
+- Icons are utilised in the footer for social account icons and for now only lead to the main social media website.
 
 ### Colors
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92331821-a64d1500-f079-11ea-9ceb-a9b1b85872bd.png" alt="Color Pallette">
 </div>
 
-- I wanted the site to maintain a minimal aesthetic, colors are very basic and clean for highlighting the photos.
-- The primary color used is black. This is used to create a stark contrast with the colors of the photos, drawing the eyes and focus on them. This removes distraction, a common practice in theatre, cinemas, etc. White is often used in galleries but has more to do with lighting and reflection. On most computer screens, wherein the light is emitted from the screen, black is a better choice.
-- One accent color was chosen, the green to give a thematic connection to nature, the outdoors and travel. A little bit more than black and white is necessary to have an impact.
-- Text is primarily written in white to contrast on the bold color backgrounds of the primary and accent colors.
-- Finally, a neutral grey color is used for the footer to set it apart from the other elements on the site.
+- I wanted the site to maintain a minimal and dark aesthetic, colors pop on the black background but remain, clean to highlight the content of the images and text.
+- The primary color used is rich black, avoiding the designers bane of full black. This is used to create a comfortable veiwing experiance I have come to personally love. This not only helps to ease strain on the eyes but draw them directly from the logo to the content. This removes distraction, a common practice in theatre, cinemas, etc. White is often used in galleries but has more to do with lighting and reflection. On most computer screens, wherein the light is emitted from the screen, black is a better choice.
+- Two accent colors were chosen, the blue to give a welcoming introduction and red to make the color contrast as well as make unmistakable the button highlights. These color choices are necessary to have an impact and lead the reader on this very dark background.
+- Text is primarily written in off-white to contrast on the dark color backgrounds of the primary and accent colors.
 
-### Images
+### Blogs
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92332253-c7633500-f07c-11ea-8f9e-a5f03b0fe1da.png" alt="Images">
 </div>
 
-- The site has a heavy focus on image use, using full-size quality images for exhibition purposes.
-- As such, the images use a script while loading that blurs thumbnails and swaps in the full quality image when fully loaded.
-- In the main gallery, images are displayed in three columns responsively, so they can easily be seen on any size device.
-- Clicking on a small image will open up a full-page modal that displays the image in detail.
-- The images will automatically space themselves vertically within the column, so the gallery height is even.
-- Images will swap out on selecting another country, resetting the loading blur feature and changing URLs.
+- The site has a heavy focus on blogs, using full-size quality images to draw in th veiwer.
+- In the main gallery, blogs are displayed in three columns responsively, so they can easily be seen on any size device.
+- Clicking on a blog will open up a full-page modal that displays the image alongside the blog content, in detail.
+- The image and text will automatically space themselves vertically within the column, so the blog remains reable.
 
 ### Styling
-- For this project I have utilised Bootstrap 4.5 source files to override their class defaults to my liking, making customisation much easier. The entire site can be restyled with a single switch in the code.
-- The primary and secondary colors have been applied to bootstrap classes for easy use across the site.
-- Using the SASS, sharp-edged boxes have been applied by default, taking advantage of the features.
-- Responsive text sizing has also been enabled using SASS.
-- As the site has a beeline focus on use, links on each page are re-used to direct the user to either the Gallery or the Contact page no matter where they look.
-- Animations are utilised for smoothness in certain transitions, such as when a new country is selected in the gallery or on the Travel Gallery link.
+- For this project I have utilised Bootstrap 5.3 source files to override their class defaults to my liking, making customisation much easier. The entire site can be restyled with a single switch in the code.
+- Utilizing CSS, all images on the home page have rounded corners on the top, providing a comfortable enterance to the page, contrast to the harsh and often unappealing nature of sharp corners.
+- As the site has a beeline focus on use, links on each page are re-used to direct the user to eitherthe home page for other blogs or the collaberation page.
+- Interactivity is paramount to any blog and as such, comments are spread and easially accessable to logged in users, providing a place to share thoughts and exchange opinions.
 
 ----
 
@@ -229,11 +224,10 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
   <img src="https://user-images.githubusercontent.com/44118951/92332689-f29b5380-f07f-11ea-9646-162f1b7b66c9.png" alt="Small Header">
 </div>
 
-- The Navbar is simple, providing only three options with only two very evident the Gallery and Contact pages, to maintain the minimalist style.
-- The Logo is always highlighted, swapping position as necessary depending on device size.
+- The Navbar is simple but striking, providing 6 options aiming to provide multiple functionality to the userwhile still attempting to maintain the minimalist style.
+- The Logo is highlighted with a small red accent to make it pop, swapping position as necessary depending on device size.
 - On smaller devices, the menu becomes collapsible.
 - The mobile nav button has been placed to the right for ease of use with one hand.
-- The navbar is fixed so it is visible no matter how far you scroll.
 
 #### Footer
 <div align="center">
@@ -241,42 +235,50 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
   <img src="https://user-images.githubusercontent.com/44118951/92339924-c0f2ae80-f0b8-11ea-8fb1-7f7593dd2dae.png" alt="Small Footer">
 </div>
 
-- Located at the bottom of every page, mainly highlighting contact and social aspects with the photographer.
-- Made of three columns, changing shape for larger or smaller devices.
-- The first column has a newsletter signup box that uses EmailJS to make contact with the photographer.
-- A modal confirming the message has been sent and changes on success or an error is used for a response.
-- A message encouraging contact is used as the second column.
-- The third column represents social media links, highlighting 500px as the place to purchase photos.
+- Located at the bottom of every page, but remaining riscrete it highlights social contacts and copyright with the blog owner.
+- Made of one column with links centered, it changes shape for larger or smaller devices.
 
 ### Index Page
-#### Jumbotron Image
+#### the Blog Posts
 - Used as a splash image that highlights a dramatic photograph, representing a sense of adventure.
 - An image with a person in it is used so the viewer can connect with it on a personal level.
 - Uses the javascript lazy loading feature as the image is large and must show all at once for an impact
 - Text is blurred and comes into view with the image to draw attention to the phrase.
 
-#### About Section
+### Collaberation Section
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92338749-aae1ef80-f0b2-11ea-854d-6700642cdef9.png" alt="About">
 </div>
 
 - After the initial image to give a strong impact, the about section is presented in the contrasting accent color to make it stand out.
+- A modal confirming the message has been sent and changes on success or an error is used for a response.
+- A message encouraging contact is used as the second column.
 - Hopefully, the impact will create enough interest to read about the photographer.
 - The section is responsive and the two columns will stack on resize.
 - The section contains a fully responsive image and a small text section with responsively sized text.
 - Contains a small link to a place where you can purchase or license photographs, highlighted and underlined in bold, this is in addition to the link in the footer.
 
-#### Travel Gallery Link
+### Comments
 - A full-width banner link that switches to brings the user to the gallery.
 - Animated with CSS to draw attention on hover.
 - Expands in size, seeming to exit from the page, and darkens the background to draw attention to the item.
 
-### Gallery Page
+### User Accounts
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92344160-fd78d700-f0c5-11ea-9017-7046a210424f.png" alt="Gallery Page">
 </div>
 
-#### Interactive Map
+#### Login
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/44118951/92340153-91907180-f0b9-11ea-857e-3a5edcc8f840.png" alt="Gallery Map">
+</div>
+
+#### Logout
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/44118951/92340153-91907180-f0b9-11ea-857e-3a5edcc8f840.png" alt="Gallery Map">
+</div>
+
+#### Register
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92340153-91907180-f0b9-11ea-857e-3a5edcc8f840.png" alt="Gallery Map">
 </div>
@@ -411,6 +413,7 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 # Testing
 ## Methods
 ### Validation
+- Testing files may be found in the source code and may be validated using "python3 manage.py test"   
 - HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/).
 - CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and auto-prefixed with [CSS Autoprefixer](https://autoprefixer.github.io/).
     - static/css/styles.css [All clear, no errors found]
@@ -439,6 +442,8 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
     - codestar/settings.py [All clear, Line-too-long errors ignored.]
 
     - manage.py [All clear, no errors found]
+
+    - Additionally, throughout development many python print statements were used to validate code. these have been removed.
 
 ### General Testing
 - Each feature was developed and tested in its own branch before being merged with master. Branches were subsequently deleted.
