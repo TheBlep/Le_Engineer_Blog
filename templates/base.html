@@ -109,7 +109,16 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="footer mt-auto py-3 dark-bg">
+    <footer class="footer mt-auto py-3 dark-bg text-center">
+        <h2 
+            class="m-0 card-footer" >Subscribe to our Newsletter
+        </h2>
+        
+        <a href="{% url 'subscribe' %}" class="m-0 text-center card-footer" method="post">
+            <button 
+                type="submit" class="btn btn-danger text-black">Subscribe
+            </button>
+        </a>
         <p class="m-0 text-center text-white">Copyright 2025 Leon</p>
         <p class="m-0 text-center text-white">Follow us:
             <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-square ms-3"></a>

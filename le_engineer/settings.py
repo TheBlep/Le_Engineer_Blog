@@ -31,7 +31,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')  # Path to the templates dir
 SECRET_KEY = config('SECRET_KEY')  # Keeps the secret key secure and out of source code.
 
 # Debug mode setting (should be False in production for security reasons).
-DEBUG = False
+DEBUG = True
 
 # Hosts allowed to access the application.
 ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']  # Restricts access to defined domains.
@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',  # Bootstrap 5 support for crispy forms.
     'blog',  # Custom blog application.
     'about',  # Custom about page application.
+    'newsletter', # Custom model prompting users to subscribe to a newsletetr.
 ]
 
 # FAQ application settings defining behavior for category descriptions.

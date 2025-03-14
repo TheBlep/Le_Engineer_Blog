@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 my-5">
+            <h2 >Newsletters</h2>
+            <ul>
+                {% for newsletter in newsletters %}
+                    <li>{{ newsletter.subject }} - {{ newsletter.created_on }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock content %}

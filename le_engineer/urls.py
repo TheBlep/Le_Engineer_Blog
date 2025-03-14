@@ -22,9 +22,10 @@ from django.urls import path, include
 urlpatterns = [
     path("faq/", include("faq.urls")),  # Include the URLs from django-easy-faq
     path("about/", include("about.urls"), name="about-urls"),
+    path('newsletter/', include('newsletter.urls')),
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path("", include("blog.urls"), name="blog-urls"),
-
+    
 ]
