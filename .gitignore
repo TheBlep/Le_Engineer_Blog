@@ -3,3 +3,4 @@
 env.py
 blog/fixtures
 .github
+__pycache__
