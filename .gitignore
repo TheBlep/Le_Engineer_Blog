@@ -2,6 +2,10 @@
 .env
 env.py
 blog/fixtures
+about/__pycache__
+blog/__pycache__
+le_engineer/__pycache__
+newsletter/__pycache__
 .github
 __pycache__
 output_file.sql
