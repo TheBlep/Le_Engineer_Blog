@@ -428,8 +428,14 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 # Testing
 ## Methods
 ### Validation
-- Testing files may be found in the source code and may be validated using "python3 manage.py test"   
+- Testing files may be found in the source code and may be validated using "python3 manage.py test"  
+
 - HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/).
+    - https://le-engineer-cb388e5b5656.herokuapp.com/ [All clear, no errors found]
+    - https://le-engineer-cb388e5b5656.herokuapp.com/about/
+    - https://le-engineer-cb388e5b5656.herokuapp.com/faq/
+    - https://le-engineer-cb388e5b5656.herokuapp.com/accounts/logout/
+
 - CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and auto-prefixed with [CSS Autoprefixer](https://autoprefixer.github.io/).
     - static/css/styles.css [All clear, no errors found]
 
@@ -437,6 +443,7 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
     - https://le-engineer-cb388e5b5656.herokuapp.com/ [No broken links]
 
 - Each javascript file was tested on the site for errors and functionality using the console and with [JSHint](https://jshint.com/).
+    - static/js/comments-js [No errors found]
 
 - Python Linter
     - about/admin.py [All clear, no errors found]
