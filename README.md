@@ -281,6 +281,7 @@ The database created follows a Django-based structure with authentication, user 
 <div align="center">
   <img src="static/images/homepage.png" alt="Blog Example">
 </div>
+
 #### Blog Posts
 - Displays the latest blog entries in a clean and structured format.
 - Uses a minimalistic design with a dark background for readability and contrast.
