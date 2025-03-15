@@ -4,14 +4,17 @@ body {
     }
     
     .brand {
-    font-family: Lato, sans-serif;
+    font-family: Roboto, serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #d9e5d6;
     }
     
+    .bluetext {
+        color: 3C6997;
+    }
     .red-o {
-    color: #E84610;
+    color: #699fd4;
     }
 
     .bright {
@@ -20,7 +23,7 @@ body {
     
     .red-e {
     font-family: Roboto, 'Times New Roman', Times, serif;
-    color: #E84610;
+    color: #699fd4;
     font-size: 1.3rem;
     font-weight: 800;
     }
@@ -56,7 +59,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #E84610;
+    background-color: #3C6997;
     }
     
     .scale {
@@ -111,7 +114,7 @@ body {
     
     .post-link:hover,
     .page-link {
-    color: #E84610;
+    color: #699fd4;
     }
     
     .post-title {
@@ -133,7 +136,7 @@ body {
     .btn-signup:hover,
     .btn-signup:active {
     background-color: #d9e5d6;
-    color: #3c6997;
+    color: #699fd4;
     }
     
     .link {
