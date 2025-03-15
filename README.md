@@ -1,9 +1,9 @@
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92330123-c924fc80-f06c-11ea-8fa6-f3e342efebb9.png" style="background-color: black" alt="Horizon Photo">
+  <img src="static/images/logo.png" style="background-color: black" alt="Horizon Photo">
 </div>
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92330234-9deedd00-f06d-11ea-98af-db71c1f07342.png" alt="Home Page">
+  <img src="static/images/httpsle-engineer-cb388e5b5656.herokuapp.com.jpg" alt="Home Page">
 </div>
 
 [Prototyping for Engineers](https://le-engineer-cb388e5b5656.herokuapp.com/) "Prototyping for Engineers" is an interactive blog designed to educate engineers, students, and enthusiasts on often-overlooked aspects of engineering and technology. The site prioritizes interactivity, allowing users to engage with content through discussions and comments. With a minimal, easy-to-read design featuring a dark background for eye comfort, the website ensures a distraction-free learning experience. While the content is still in development, AI-generated placeholders help structure the topics. The goal is to provide valuable insights that engineers might miss in their day-to-day work, making it a hub for continuous learning and discussion."
@@ -172,7 +172,7 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 
 ### Fonts
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92331221-6f750000-f075-11ea-8096-288bcc957e33.png" alt="Fonts">
+  <img src="static/images/nav.png" alt="Fonts">
 </div>
 
 - The primary font, [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto) was chosen because it is minimal, and easy to read while remaining refined. As a font, it gave me the impression of something utilitarian but comfortable. Being clear, clean and simple, maintaining the idea of a minimalist aesthetic. 
@@ -181,7 +181,7 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 
 ### Icons
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92331590-1fe40380-f078-11ea-814b-d15b413f59aa.png" alt="Icons">
+  <img src="static/images/icon.png" alt="Icons">
 </div>
 
 - Icons are taken from the [Fontawesome](https://fontawesome.com/) Icon library.
@@ -189,7 +189,7 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 
 ### Colors
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92331821-a64d1500-f079-11ea-9ceb-a9b1b85872bd.png" alt="Color Pallette">
+  <img src="static/images/colorthing.jpg" alt="Color Pallette">
 </div>
 
 - I wanted the site to maintain a minimal and dark aesthetic, colors pop on the black background but remain, clean to highlight the content of the images and text.
@@ -199,7 +199,7 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 
 ### Blogs
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92332253-c7633500-f07c-11ea-8f9e-a5f03b0fe1da.png" alt="Images">
+  <img src="static/images/homepage.png" alt="Images">
 </div>
 
 - The site has a heavy focus on blogs, using full-size quality images to draw in th veiwer.
@@ -208,20 +208,48 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 - The image and text will automatically space themselves vertically within the column, so the blog remains reable.
 
 ### Styling
+<div align="center">
+  <img src="static/images/postpage.png" alt="Images">
+</div>
 - For this project I have utilised Bootstrap 5.3 source files to override their class defaults to my liking, making customisation much easier. The entire site can be restyled with a single switch in the code.
 - Utilizing CSS, all images on the home page have rounded corners on the top, providing a comfortable enterance to the page, contrast to the harsh and often unappealing nature of sharp corners.
 - As the site has a beeline focus on use, links on each page are re-used to direct the user to eitherthe home page for other blogs or the collaberation page.
 - Interactivity is paramount to any blog and as such, comments are spread and easially accessable to logged in users, providing a place to share thoughts and exchange opinions.
 
 ----
+## Entity-Relationship Diagram (ERD)
+### Database Schema Overview
+
+<img src="static/images/ERD.png" alt="Medium Header">
+
+The database created follows a Django-based structure with authentication, user management, and content tracking. Below are the key entities and their relationships complimenting the above generated ERD diagram.
+
+1. **User Management:**
+   - `auth_user`: Stores registered users with attributes like `username`, `email`, `password`, and role flags.
+   - `auth_group`: Defines user groups or roles.
+   - `auth_permission`: Manages permissions assigned to users or groups.
+   - **Relationships:**
+     - `auth_user_groups`: Links users to groups (many-to-many).
+     - `auth_user_user_permissions`: Links users to permissions (many-to-many).
+     - `auth_group_permissions`: Links groups to permissions (many-to-many).
+
+2. **Content and Logging:**
+   - `django_content_type`: Tracks Django model registrations.
+   - `django_admin_log`: Logs administrative actions, linking to `auth_user` and `django_content_type`.
+
+3. **Sessions and Migrations:**
+   - `django_session`: Manages user sessions.
+   - `django_migrations`: Tracks database schema changes.
+
+
 
 # Features
 ## Page Elements
 ### All Pages
 #### Navbar
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92332641-b831b680-f07f-11ea-8ff6-d414e661b490.png" alt="Medium Header">
-  <img src="https://user-images.githubusercontent.com/44118951/92332689-f29b5380-f07f-11ea-9646-162f1b7b66c9.png" alt="Small Header">
+  <img src="static/images/nav.png" alt="Medium Header">
+  <img src="static/images/smallnav.png" alt="Small Header">
 </div>
 
 - The Navbar is simple but striking, providing 6 options aiming to provide multiple functionality to the userwhile still attempting to maintain the minimalist style.
@@ -231,115 +259,75 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 
 #### Footer
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92339926-c18b4500-f0b8-11ea-9101-c5f3e55b4b95.png" alt="Medium Footer">
-  <img src="https://user-images.githubusercontent.com/44118951/92339924-c0f2ae80-f0b8-11ea-8fb1-7f7593dd2dae.png" alt="Small Footer">
+  <img src="static/images/footer2.png" alt="Medium Footer">
+  <img src="static/images/smallfooter.png" alt="Small Footer">
 </div>
 
-- Located at the bottom of every page, but remaining riscrete it highlights social contacts and copyright with the blog owner.
+- Located at the bottom of every page, The first thing you noticed is the subscribe call to action before highlighting social contacts and copyright with the blog owner.
 - Made of one column with links centered, it changes shape for larger or smaller devices.
 
-### Index Page
-#### the Blog Posts
-- Used as a splash image that highlights a dramatic photograph, representing a sense of adventure.
-- An image with a person in it is used so the viewer can connect with it on a personal level.
-- Uses the javascript lazy loading feature as the image is large and must show all at once for an impact
-- Text is blurred and comes into view with the image to draw attention to the phrase.
 
-### The Blog posts
+## Website Structure
+### Index Page
+#### Blog Posts
+- Displays the latest blog entries in a clean and structured format.
+- Uses a minimalistic design with a dark background for readability and contrast.
+- Interactive elements enhance user experience, such as hover effects on post titles.
+- Blog posts include metadata such as the author and posting date.
+
+### The Blog Content
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92338749-aae1ef80-f0b2-11ea-854d-6700642cdef9.png" alt="About">
+  <img src="https://user-images.githubusercontent.com/44118951/92338749-aae1ef80-f0b2-11ea-854d-6700642cdef9.png" alt="Blog Example">
 </div>
 
-- After the initial image to give a strong impact, the about section is presented in the contrasting accent color to make it stand out.
-- A modal confirming the message has been sent and changes on success or an error is used for a response.
-- A message encouraging contact is used as the second column.
-- Hopefully, the impact will create enough interest to read about the photographer.
-- The section is responsive and the two columns will stack on resize.
-- The section contains a fully responsive image and a small text section with responsively sized text.
-- Contains a small link to a place where you can purchase or license photographs, highlighted and underlined in bold, this is in addition to the link in the footer.
+- Each blog post has a dedicated page displaying its full content.
+- Comment sections allow for community interaction.
+- Posts feature relevant images and embedded media to enhance readability.
+- Navigation links make it easy to browse through multiple posts.
 
-### Comments
-- A full-width banner link that switches to brings the user to the gallery.
-- Animated with CSS to draw attention on hover.
-- Expands in size, seeming to exit from the page, and darkens the background to draw attention to the item.
+### Comments Section
+- Users can leave comments on blog posts.
+- A clean, responsive design ensures readability on different devices.
+- Uses AJAX for smooth submission without needing to reload the page.
+- Moderation features help maintain constructive discussions.
+- Styled to match the website’s aesthetic while maintaining clarity.
+
 
 #### Comment delete
-
 ### User Accounts
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92344160-fd78d700-f0c5-11ea-9017-7046a210424f.png" alt="Gallery Page">
-</div>
+- Users can create an account to engage with the platform.
+- Account creation allows interaction with blog posts, such as commenting.
+- Secure authentication through oauth ensure user data protection.
 
 ### Login
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92340153-91907180-f0b9-11ea-857e-3a5edcc8f840.png" alt="Gallery Map">
-</div>
+- Users can log in using their credentials to access personalized features.
+- Ensures session persistence, allowing users to stay logged in securely.
 
 ### Logout
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92340153-91907180-f0b9-11ea-857e-3a5edcc8f840.png" alt="Gallery Map">
-</div>
+- Provides a simple logout functionality to end the user's session securely.
+- Redirects to the home page after logging out.
 
 ### Register
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92340153-91907180-f0b9-11ea-857e-3a5edcc8f840.png" alt="Gallery Map">
-</div>
+- New users can sign up with their email and password.
+- Registration includes validation to prevent invalid inputs.
+- Ensures only registered users can interact with content.
 
-- Uses the[Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial) to load an interactive map.
-- All features utilise javascript.
-- The [Google Maps Styling Wizard](https://mapstyle.withgoogle.com/) has been used to keep the map consistent with the site pallette.
-- The map zoom level is set differently depending on the device screen size.
-- Map markers are automatically generated and pull info from the [REST Countries API](https://restcountries.eu/).
-- Adding a country name to the `countryName` variable in `map.js` will allow a marker to be created with an info window that has the country statistics already filled.
-- `map.js` will automatically format the country info for the info window to be easily readable.
-- The info window has been styled to be consistent with the other elements of the site.
-- Content in the info window will automatically delete and refresh for each marker.
-- The country information is used to swap the picture URLs in the gallery.
-- Markers are animated to drop onto the map together.
-- The selected marker has been set to animate on click and stop any other animated markers. A second click will stop the animation.
-- After being clicked the page will briefly show the info window opening before smoothly scrolling down to the gallery automatically to carry the user to the images.
-- After a short scroll down a little arrow will appear in the bottom right which can be used to scroll to the top of the page again.
-- If the [REST Countries API](https://restcountries.eu/) is unreachable for any reason, the `markerArray.js` file is used to produce the markers.
-- In the backup function, the info window is not generated as that required the API.
 
 #### Collaberation page
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92342235-812fc500-f0c0-11ea-8867-806e010a7638.png" alt="Iframe Gallery">
+  <img src="static/images/collab.png" alt="collaberation page">
 </div>
 
-- A fully responsive, javascript-backed iframe gallery.
-- Displays three columns no matter the device size, so all photos are nicely displayed.
-- Used as an iframe so the layout can be modified separately from the gallery data.
-- Starts by displaying default images and an invitation to use the map.
-- Once a map marker is clicked, the images will swap out URLs, and the countries images will show.
-- Functions listen for a change to reset the image blur function.
-- Information for a blurb is stored on the gallery page and injected into the loaded iframe on click.
-- The swap is animated with jQuery to make it less sudden.
-- Clicking on an image will insert the image source path into a modal before it pops up to display the image in full quality.
-- The gallery's height can vary by photos and device, so there is a function to adjust the height.
-- The function fires on page load one, and then each time a marker is clicked, after every image has loaded completely, otherwise the height set may be incorrect.
-- The images in the gallery space vertically automatically based on the gallery height.
+- The collaberaiton page allows useres to provide a message and their details to ask to collaberate with the website blog author.
 
 ### Subscription page
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92344558-159d2600-f0c7-11ea-9e1d-836b5bc2586a.png" alt="Iframe Gallery">
+  <img src="static/images/subscribe.png" alt="subpage">
 </div>
 
-- A simple page highlighting the author with a contact form that utilises [EmailJS](https://www.emailjs.com/) to send the emails.
-- The form has validation and is fully responsive.
-- Once the send button is pressed, a modal will open notifying the user that the message is sending.
-- The modal has fields that are modified by the `sendMail.js` script.
-- A success or an error message will be displayed depending on the result.
-- The form fields will be cleared only on a successful response.
-- A response message is sent to every email received, set up in EmailJS as a template.
+- A simple page allowing users to enter their email and sign up to a newsletter
 
 ## Additional Features
-### Image Loading Blur
-- All images utilise a loading blur function to smooth out their loading as the high-quality images can slow things down.
-- The function places a low-quality thumbnail as the default image, covering it with a CSS blur filter.
-- Simultaneously, it loads the full quality image set as the background image. Once it detects it is loaded it adds a class.
-- The class makes the thumbnail transparent, using animation to smooth the transition.
-- Had to be carefully used to correctly open the image modal.
 
 ### Admin page
 - All data coming in and out of the website can be controlled here via CRUD.
@@ -360,10 +348,10 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 ## Languages
 - [HTML](w3.org/standards/webdesign/htmlcss)
     * Page markup.
+- [PYTHON](https://www.python.org/)
+    * Page logic.
 - [CSS](w3.org/standards/webdesign/htmlcss)
     * Styling.
-- [SASS](https://sass-lang.com/)
-    * Used to customise Bootstrap and CSS styles.
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
     * Running functions for interactive components, AJAX, etc.
 
@@ -410,7 +398,6 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
     * An advanced, open-source relational database management system known for its robustness, extensibility, and support for complex queries.
 
 
-
 ## Other Tools
 - [dbdiagram.io](https://dbdiagram.io)
     * A web-based tool for designing and visualizing database schemas.
@@ -432,9 +419,9 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 
 - HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/).
     - https://le-engineer-cb388e5b5656.herokuapp.com/ [All clear, no errors found]
-    - https://le-engineer-cb388e5b5656.herokuapp.com/about/
-    - https://le-engineer-cb388e5b5656.herokuapp.com/faq/
-    - https://le-engineer-cb388e5b5656.herokuapp.com/accounts/logout/
+    - https://le-engineer-cb388e5b5656.herokuapp.com/about/ [All clear, no errors found]
+    - https://le-engineer-cb388e5b5656.herokuapp.com/faq/ [All clear, no errors found]
+    - https://le-engineer-cb388e5b5656.herokuapp.com/accounts/logout/ [All clear, no errors found]
 
 - CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and auto-prefixed with [CSS Autoprefixer](https://autoprefixer.github.io/).
     - static/css/styles.css [All clear, no errors found]
@@ -491,89 +478,72 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 
 ## Bugs
 ### Known Bugs
-- Occasionally on a device with low RAM, the Google Maps API won't load.
-- Devices with low RAM may have stuttered animations.
-- Offline, using the backup map, the images don't switch the first time the page loads. No errors are shown on the console. A refresh usually solves the issue.
-- Very slow connections may have users see the thumbnails pop in during iframe loading, rather than having the switch occur during the animation.
+- Currently not fully st up for newsletters. This would require an email setup.
 
 ### Fixed Bugs
-- Jumbotron image wouldn't de-blur. Fixed by adding a custom class for selection and differentiation.
-- Markers wouldn't load if the connection to the API was slow. Fixed by adding a backup array to be used as a fall-back.
-- EmailJS wasn't allowing newsletters to be sent on the contact page. Fixed by giving each form a separate ID.
-- The map info window wouldn't dispose of itself but would open multiple instances, one over the other. Fixed by moving the initialisation instance outside of the click function.
-- The info window would concatenate one country's information with another after clicked. Fixed by clearing the info window content on each click before populating it with info.
-- If a country had multiple first languages, the info window would have a display that clipped them as they were stored in an array themselves. Fixed by writing a custom function to deal with languages.
-- All map markers would bounce if they had animations set to active. Fixed by looping through the markers and setting them to no animation before activating the clicked marker's animation.
-- The modal for images in the gallery wouldn't open because of the blur function. Fixed by changing the HTML structure on the page and the iframe.
-- One I added SASS, many of the site's display features were broken. Fixed by cleaning up the CSS files and removing clashing styles.
+- contrast on dark background was not high enough for accessability and was changed to a bright text on darker background
+- Comments were not accessable from the admin page, fixed by connecting the comments via adding to the urls
+- Delete comment confirmation was not visible. Fixed by adding text-black to the content.
+- The subscribe button was throwing errors and breaking the entire website when a link was added. This was fixed by removing the 'a' tag and replacing it with a form and an action= instead of an href. 
+- Many more bugs were fixed but non as largely breaking as the ones above.
 
 ----
-
 # Deployment
 ## Local Deployment
 ### Local Preparation
 **Requirements:**
 - An IDE of your choice, such as [Visual Studio Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
-- You will have to set up a connection with an email server through EmailJS:
-- You will have to install SASS to compile the CSS. This depends on your system and your method choice. Please see the instructions [here](https://sass-lang.com/install).
+- [Python](https://www.python.org/downloads/) installed on your system
 
 ### Local Instructions
-1. Download a copy of the project repository [here](https://github.com/Ri-Dearg/neverlost-thrift/archive/master.zip) and extract the zip file to your base folder. Or you can clone the repository with:
+1. Download a copy of the project repository [here](https://github.com/TheBlep/Le_Engineer_Blog) and extract the zip file to your base folder. Or you can clone the repository with:
+    ```sh
+    git clone https://github.com/TheBlep/Le_Engineer_Blog.git
     ```
-    git clone https://github.com/Ri-Dearg/neverlost-thrift
-    ```
-    To disconnect it from the master repository, use:
-    ```
+    To disconnect it from the original repository, use:
+    ```sh
     git remote rm origin
     ```
 2. Open your IDE and choose the base directory.
-3. Here you can install SASS with npm, if you choose, with:
-    ```
-    npm install -g sass
-    ```
-4. Run the compiler with:
-    ```
-    sass --watch assets/css/bootstrap_sass:assets/css
-    ```
-    This will also watch the bootstrap_sass folder for changes and re-compile the CSS when they are made. This way you can make changes quickly and not worry about re-compiling.
-6. Switch the user token for EmailJS with your own. It can be found in the head tag:
-    ```
-    (function () {
-        emailjs.init("<your user token>");
-    })();
-    ```
-5. Run the project with your chosen method. You can drop index.html into a web browser and it should run fine, open a local port and access it or, if you have python installed, run it on an HTTP server with python with a command such as:
-    ```
-    python3 -m http.server
-    ```
-6. Enjoy the site!
 
-## Github Deployment
-### Github Preparation
-- It is possible to copy or clone the repository to directly for deployment, but you will have to compile the make sure the SCSS compiles correctly first. Github Pages' Jekyll themes support this but you will have to make some customisations. Details can be found [here](https://jekyllrb.com/docs/assets/).
-**Requirements:**
-- A free GitHub account.
-- A free EmailJS account.
+3. Set up a virtual environment in VS Code:
+    - Open a terminal in VS Code.
+    - Run the following command to create a virtual environment:
+      ```sh
+      python3 -m venv .venv
+      ```
+    - Activate the virtual environment:
+      - On Windows (PowerShell):
+        ```sh
+        .venv\Scripts\Activate
+        ```
+      - On macOS/Linux:
+        ```sh
+        source .venv/bin/activate
+        ```
+    - Install dependencies from `requirements.txt`:
+      ```sh
+      pip install -r requirements.txt
+      ```
 
-### Github Instructions
-1. Log in to your GitHub account.
-navigate to [https://github.com/Ri-Dearg/neverlost-thrift](https://github.com/Ri-Dearg/neverlost-thrift).
-1. You can set up your own repository and copy or clone it, or you fork the repository.
-2. `git add`, `git commit` and `git push` to a GitHub repository, if necessary.
-3. GitHub pages will update from the master branch by default.
-4. Go to the **Settings** page of the repository.
-5. Scroll down to the **Github Pages** section.
-7. Select the Master Branch as the source and **Confirm** the selection.
-8. Wait a minute or two and it should be live for viewing. See my own [here](https://ri-dearg.github.io/horizon-photo/).
+4. Run the project with your chosen method. If you have Python installed, you can run it using an HTTP server with the following command:
+    ```sh
+    python3 manage.py runserver
+    ```
+5. Open your web browser and navigate to `http://127.0.0.1:8000/` to access the site.
+6. Enjoy!
+
+## Online via Heroku
+You can veiw the active site via the following Herkou link [here](https://le-engineer-cb388e5b5656.herokuapp.com/)
+
 
 ## Credits and Contact
 ### Content
-Nearly all text content was generated by the AI, GPT-2, at [Talk to Transformer](https://talktotransformer.com/).
-**(So there will be plenty of grammar or spelling errors or even a bit of nonsense, but I thought it would be a fun addition to the project)88 
+Nearly all text content was generated by the AI, GPT-3.
+All images are not mine and were downloaded from google.
 Any code utilised from a site is documented and credited within the code.
-All photographs, authors, license rights, copyright, etc. used in this project can be found [here](https://unsplash.com/collections/8825126/used-in-horizon-photo). No credit is required from Unsplash,  
-All other media used is my own.
+All photographs, authors, license rights, copyright, etc. used in this project are for educational use only and no claim is made.
 
 ### Contact
 Please feel free to contact me over github

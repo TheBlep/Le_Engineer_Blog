@@ -1,185 +1,187 @@
+/* Global styles for body */
 body {
-    background-color: #050517;
-    color: #d9e5d6;
-    }
+    background-color: #050517; /* Dark background for a minimalistic look */
+    color: #d9e5d6; /* Light text for readability */
+}
 
-    .brand {
+/* Branding styles */
+.brand {
     font-family: Roboto, serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #d9e5d6;
-    }
-    
-    .bluetext {
-        color: #3C6997;
-    }
-    .red-o {
-    color: #699fd4;
-    }
+}
 
-    .bright {
-    color: #D9E5D6;
-    }
-    
-    .red-e {
+/* Text color variations */
+.bluetext {
+    color: #3C6997; /* Blue shade for emphasis */
+}
+.red-o {
+    color: #699fd4; /* Blue shade despite 'red' in class name */
+}
+.bright {
+    color: #D9E5D6; /* Bright text color */
+}
+.red-e {
     font-family: Roboto, 'Times New Roman', Times, serif;
-    color: #699fd4;
+    color: #699fd4; /* Again, a blue shade instead of red */
     font-size: 1.3rem;
     font-weight: 800;
-    }
-    
-    .thin {
+}
+
+/* Font weight variations */
+.thin {
     font-weight: 300;
-    }
-    
-    .light-bg {
-    background-color: #d9e5d6;
-    }
-    
-    .dark-bg {
-    background-color: #050517;
-    }
-    
-    .main-bg {
-    background-color: #050517;
-    }
-    
-    .card {
+}
+
+/* Background color classes */
+.light-bg {
+    background-color: #d9e5d6; /* Light background for contrast */
+}
+.dark-bg {
+    background-color: #050517; /* Dark background, same as body */
+}
+.main-bg {
+    background-color: #050517; /* Redundant with .dark-bg */
+}
+
+/* Card styles */
+.card {
     border: none;
     color: #d9e5d6;
     background-color: transparent;
     text-decoration: none;
-    }
-    
-    .cardfaq {
-        border: none;
-        color: #699fd4;
-        background-color: transparent;
-        text-decoration: none;
-        }
-    
-    .image-container {
+}
+.cardfaq {
+    border: none;
+    color: #699fd4;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+/* Image positioning */
+.image-container {
     position: relative;
-    }
-    
-    .image-flash {
+}
+.image-flash {
     position: absolute;
     bottom: 5%;
     min-width: 30%;
     left: -2px;
     background-color: #3C6997;
-    }
-    
-    .scale {
+}
+
+/* Image scaling */
+.scale {
     width: 100%;
     height: auto;
-    }
-    
-    .author {
+}
+
+/* Author text styling */
+.author {
     color: #d9e5d6;
     margin: 4px;
     text-transform: uppercase;
-    }
-    
-    .masthead {
+}
+
+/* Masthead section */
+.masthead {
     margin-top: 10px;
     overflow: hidden;
     position: relative;
     display: inline-block;
     height: 33vh;
     width: 100%;
-    }
-    
-    .masthead-text {
+}
+.masthead-text {
     background-color: #050517;
     color: #d9e5d6;
     position: relative;
-    }
-    
-    .masthead-image {
+}
+.masthead-image {
     position: relative;
     overflow: hidden;
-    }
-    
-    .masthead-image:after {
+}
+.masthead-image:after {
     content: "";
     position: absolute;
     top: 0;
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #050517;
+    background: #050517; /* Creates a slanted overlay effect */
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
-    }
-    
-    .post-link {
+}
+
+/* Post and page link styles */
+.post-link {
     text-decoration: none;
     color: #D9E5D6;
-    }
-    
-    .post-link:hover,
-    .page-link {
+}
+.post-link:hover,
+.page-link {
     color: #699fd4;
-    }
-    
-    .post-title {
+}
+
+/* Post title and subtitle margins */
+.post-title {
     margin-top: 10%;
     margin-left: 5%;
-    }
-    
-    .post-subtitle {
+}
+.post-subtitle {
     margin-left: 5%;
     color: #d9e5d6;
-    }
-    
-    .btn-signup,
-    .btn-edit {
+}
+
+/* Button styles */
+.btn-signup,
+.btn-edit {
     background-color: #3c6997;
     color: #d9e5d6;
-    }
-    
-    .btn-signup:hover,
-    .btn-signup:active {
+}
+.btn-signup:hover,
+.btn-signup:active {
     background-color: #d9e5d6;
     color: #699fd4;
-    }
-    
-    .link {
+}
+
+/* Link styling */
+.link {
     color: #3c6997;
     text-decoration: none;
-    }
-    
-    .link:hover,
-    .link:active {
+}
+.link:hover,
+.link:active {
     color: #E84610;
     text-decoration: underline;
-    }
-    
-    .btn-like {
+}
+
+/* Like and delete button styles */
+.btn-like {
     color: #E84610;
     border: none;
     background: transparent;
-    }
-    
-    .btn-delete {
+}
+.btn-delete {
     color: #d9e5d6;
     background: #E84610;
-    }
-    
-    .btn-like:hover,
-    .btn-like:active {
+}
+.btn-like:hover,
+.btn-like:active {
     color: #E84610;
     background: transparent;
     border: none;
-    }
-    
-    .faded {
+}
+
+/* Faded text for subtle elements */
+.faded {
     color: #666;
-    }
-    
-    .approval {
+}
+
+/* Approval status color */
+.approval {
     color: #E84610;
-    }
+}
