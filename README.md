@@ -430,6 +430,12 @@ The database created follows a Django-based structure with authentication, user 
 ### Validation
 - Testing files may be found in the source code and may be validated using "python3 manage.py test"  
 
+- Performance was tested via [Pagespeed](https://pagespeed.web.dev/)
+    Best Practices are lower due to HTTPS not being implemented. Otherwise the site passes perfectly.
+    <div align="center">
+        <img src="static/images/accessable.png" alt="collaberation page">
+    </div>
+
 - HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/).
     - https://le-engineer-cb388e5b5656.herokuapp.com/ [All clear, no errors found]
     - https://le-engineer-cb388e5b5656.herokuapp.com/about/ [All clear, no errors found]
