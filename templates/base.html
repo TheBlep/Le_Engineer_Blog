@@ -114,11 +114,12 @@
             class="m-0 card-footer" >Subscribe for more Engineering tips!
         </h2>
         
-        <a href="{% url 'subscribe' %}" class="m-0 text-center card-footer" method="post">
+        <form action="{% url 'subscribe' %}" class="m-0 text-center card-footer" method="post">
+            {% csrf_token %}
             <button 
                 type="submit" class="btn btn-signup">Subscribe
             </button>
-        </a>
+        </form>
         <p class="m-0 text-center text-white">Copyright 2025 Leon</p>
         <p class="m-0 text-center text-white">Follow us on socials:
             <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-square ms-3"></a>
