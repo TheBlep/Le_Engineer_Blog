@@ -2,7 +2,7 @@ body {
     background-color: #050517;
     color: #d9e5d6;
     }
-    
+
     .brand {
     font-family: Roboto, serif;
     font-size: 1.4rem;
@@ -11,7 +11,7 @@ body {
     }
     
     .bluetext {
-        color: 3C6997;
+        color: #3C6997;
     }
     .red-o {
     color: #699fd4;
@@ -48,8 +48,16 @@ body {
     border: none;
     color: #d9e5d6;
     background-color: transparent;
+    text-decoration: none;
     }
-    
+
+    .cardfaq {
+    border: none;
+    color: #699fd4;
+    background-color: transparent;
+    text-decoration: none;
+    }
+
     .image-container {
     position: relative;
     }

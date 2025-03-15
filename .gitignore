@@ -4,3 +4,4 @@ env.py
 blog/fixtures
 .github
 __pycache__
+output_file.sql
