@@ -168,7 +168,16 @@ The Business Goals of the Le_Eneer engineering blog are:
 
 ## Visual Design
 ### Wireframes
-Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdoFJsQ?usp=sharing
+The wireframes were done using [wirify](https://www.wirify.com/)
+#### The home page
+<div align="center">
+  <img src="static/images/wireframhome.png" alt="Fonts">
+</div>
+
+#### A blog post
+<div align="center">
+  <img src="static/images/wireframepost.png" alt="Fonts">
+</div>
 
 ### Fonts
 <div align="center">
