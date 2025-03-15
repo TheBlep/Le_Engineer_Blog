@@ -194,7 +194,7 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 
 - I wanted the site to maintain a minimal and dark aesthetic, colors pop on the black background but remain, clean to highlight the content of the images and text.
 - The primary color used is rich black, avoiding the designers bane of full black. This is used to create a comfortable veiwing experiance I have come to personally love. This not only helps to ease strain on the eyes but draw them directly from the logo to the content. This removes distraction, a common practice in theatre, cinemas, etc. White is often used in galleries but has more to do with lighting and reflection. On most computer screens, wherein the light is emitted from the screen, black is a better choice.
-- Two accent colors were chosen, the blue to give a welcoming introduction and red to make the color contrast as well as make unmistakable the button highlights. These color choices are necessary to have an impact and lead the reader on this very dark background.
+- Two accent colors were chosen, the blue to give a welcoming introduction and red to make the color contrast as well as make unmistakable the button highlights. These color choices are necessary to have an impact and lead the reader on this dark background.
 - Text is primarily written in off-white to contrast on the dark color backgrounds of the primary and accent colors.
 
 ### Blogs
@@ -245,7 +245,7 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 - Uses the javascript lazy loading feature as the image is large and must show all at once for an impact
 - Text is blurred and comes into view with the image to draw attention to the phrase.
 
-### Collaberation Section
+### The Blog posts
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92338749-aae1ef80-f0b2-11ea-854d-6700642cdef9.png" alt="About">
 </div>
@@ -263,22 +263,24 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 - Animated with CSS to draw attention on hover.
 - Expands in size, seeming to exit from the page, and darkens the background to draw attention to the item.
 
+#### Comment delete
+
 ### User Accounts
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92344160-fd78d700-f0c5-11ea-9017-7046a210424f.png" alt="Gallery Page">
 </div>
 
-#### Login
+### Login
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92340153-91907180-f0b9-11ea-857e-3a5edcc8f840.png" alt="Gallery Map">
 </div>
 
-#### Logout
+### Logout
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92340153-91907180-f0b9-11ea-857e-3a5edcc8f840.png" alt="Gallery Map">
 </div>
 
-#### Register
+### Register
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92340153-91907180-f0b9-11ea-857e-3a5edcc8f840.png" alt="Gallery Map">
 </div>
@@ -300,7 +302,7 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 - If the [REST Countries API](https://restcountries.eu/) is unreachable for any reason, the `markerArray.js` file is used to produce the markers.
 - In the backup function, the info window is not generated as that required the API.
 
-#### Iframe Gallery
+#### Collaberation page
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92342235-812fc500-f0c0-11ea-8867-806e010a7638.png" alt="Iframe Gallery">
 </div>
@@ -318,7 +320,7 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 - The function fires on page load one, and then each time a marker is clicked, after every image has loaded completely, otherwise the height set may be incorrect.
 - The images in the gallery space vertically automatically based on the gallery height.
 
-### Contact Page
+### Subscription page
 <div align="center">
   <img src="https://user-images.githubusercontent.com/44118951/92344558-159d2600-f0c7-11ea-9e1d-836b5bc2586a.png" alt="Iframe Gallery">
 </div>
@@ -339,23 +341,18 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 - The class makes the thumbnail transparent, using animation to smooth the transition.
 - Had to be carefully used to correctly open the image modal.
 
-### Email
-- EmailJS is functional on every page through the newsletter form.
-- The newsletter form has all the same basic features, like the contact form; validation, the modal, success and error messages are all present.
-- Differentiates between the contact page form for messages and the newsletter form.
+### Admin page
+- All data coming in and out of the website can be controlled here via CRUD.
+- Comments from users may be validated and confirmed here.
+- Newsletters and posts may be created.
 
 ## Feature Ideas
 ### Basic
-- A selection of countries to click on that brings you directly to the gallery.
-- The ability to share photos directly to social media.
-- Purchasing on the site
-- More details about countries.
+- All links are placeholders for now, leading to the socal page. For this blog to be fully function social pages would nee to be made and linked
+- The ability to reply to indevidual comments to create a thread type discussion would be very good for interactivity
+- Some kind of monitization in terms of newsletter content or behind the scenes.
+- Generally the style if good, but could do with an actual designer.
 
-### Content 
-- A wider range of countries and images. At the moment I didn't want to clutter the map.
-- The user selects a country and an API pull in relevant images of that location.
-- An API wherein the placename and the blurb are automatically generated.
-- Blog posts on the website for more flavour text.
 
 ----
 
@@ -371,36 +368,54 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
     * Running functions for interactive components, AJAX, etc.
 
 ## Frameworks
-- [Bootstrap4](https://getbootstrap.com/)
-    * Used for basic styles and outline.
+- [Django](https://www.djangoproject.com/)
+    * Used as a high-level Python framework, enabeling rapid development.
+- [Bootstrap](https://getbootstrap.com/)
+    * Used for its easy nav-bar and button styling.
 
 ## Libraries
-- [JQuery](https://jquery.com/)
-    * Animations and click functions.
-- [Google Fonts](https://fonts.google.com)
-    * Font Styles.
-- [Fontawesome](https://fontawesome.com/)
-    * Used for icons
+ Many Libraries were used, with the most prominant listed here. A full list of libraries can be found in requirements.txt
+
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
+    * Integrated set of Django applications addressing authentication, registration, account management, and third party (social) account authentication.
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+    * A Django app that helps you manage Django forms in a more elegant way.
+- [gunicorn](https://gunicorn.org/)
+    * A Python WSGI HTTP Server for UNIX.
+- [cloudinary](https://cloudinary.com/)
+    * A cloud service that offers a solution to a web application's entire image management pipeline.
+- [requests](https://docs.python-requests.org/en/latest/)
+    * A simple, yet elegant HTTP library for Python.
+- [cryptography](https://cryptography.io/en/latest/)
+    * A package designed to expose cryptographic recipes and primitives to Python developers.
+- [whitenoise](http://whitenoise.evans.io/en/stable/)
+    * A middleware for serving static files in a Django application.
 
 ## APIs
-- [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial)
-    * Map, markers and styles.
-- [REST Countries API](https://restcountries.eu/)
-    * Statistics for infowindow, marker information
+- [Cloudinary API](https://cloudinary.com/documentation)
+    * A cloud service that provides a comprehensive solution for image and video management, including uploading, transforming, and delivering media assets efficiently.
+
+- [OAuth API](https://oauth.net/2/)
+    * A protocol that allows third-party applications to securely access user data without sharing passwords, commonly used for social authentication in web applications.
+
 
 ## Platforms
 - [Github](https://github.com/)
     * Storing code remotely and deployment.
-- [Gitpod](https://gitpod.io/)
-    * IDE for project development.
+- [CODE OSS](https://code.visualstudio.com/)
+    * An open-source version of Visual Studio Code.
+- [Heroku](https://www.heroku.com/)
+    * A cloud platform that enables developers to build, run, and operate applications entirely in the cloud, simplifying deployment and scaling.
+- [PostgreSQL](https://www.postgresql.org/)
+    * An advanced, open-source relational database management system known for its robustness, extensibility, and support for complex queries.
+
+
 
 ## Other Tools
-- [Balsamiq](https://balsamiq.com/)
-    * To create wireframes.
-- [Favicon Generator](https://www.favicon-generator.org/)
-    * Favicons
-- [Mockup Generator](https://techsini.com/multi-mockup/index.php)
-    * For device mockup images.
+- [dbdiagram.io](https://dbdiagram.io)
+    * A web-based tool for designing and visualizing database schemas.
+- [Canva](https://www.canva.com/)
+    * A graphic design platform, used to create mockups.
 - [Coolors](https://coolors.co/)
     * Creating color pallettes.
 
@@ -453,6 +468,8 @@ Wireframes: https://drive.google.com/drive/folders/1WwDSap35rXV1i8_9hCPBqiXvpMdo
 - .gitignore file has been included to prevent system file commits as well as hide any sensitive information and reduce the ease of malicious attacks.
 - Image upload functions have been tested with different formats and sizes.
 - External links open in a new tab. Also being tested on multiple devices on multiple browsers.
+- Attempts at accessing the admin page have tested; when altering the url.
+- attempts attempts at altering other users comments through url manipulation are not possibel.
 
 ### Mobile Testing
 - I tested the site personally on my Android device, going through every function; checking buttons, forms, logging in/out, etc. I was personally unable to test on iOS.
