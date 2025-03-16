@@ -7,7 +7,6 @@
 </div>
 
 [Prototyping for Engineers](https://le-engineer-cb388e5b5656.herokuapp.com/) "Prototyping for Engineers" is an interactive blog designed to educate engineers, students, and enthusiasts on often-overlooked aspects of engineering and technology. The site prioritizes interactivity, allowing users to engage with content through discussions and comments. With a minimal, easy-to-read design featuring a dark background for eye comfort, the website ensures a distraction-free learning experience. While the content is still in development, AI-generated placeholders help structure the topics. The goal is to provide valuable insights that engineers might miss in their day-to-day work, making it a hub for continuous learning and discussion."
-
 ## Table of Contents
 1. <details open>
     <summary><a href="#ux">UX</a></summary>
@@ -45,13 +44,6 @@
     - [Index Page](#index-page)
     - [Gallery Page](#gallery-page)
     - [Contact Page](#contact-page)
-    </details></li>
-
-    <li><details>
-    <summary><a href="#additional-features">Additional Features</a></summary>
-
-    - [Image Loading Blur](#image-loading-blur)
-    - [Email](#email)
     </details></li>
 
     <li><details>
@@ -108,10 +100,10 @@
     </details></li>
 
     <li><details>
-    <summary><a href="#github-deployment">Github Deployment</a></summary>
+    <summary><a href="#github-deployment">GitHub Deployment</a></summary>
 
-    - [Github Preparation](#github-preparation)
-    - [Github Instructions](#github-instructions)
+    - [GitHub Preparation](#github-preparation)
+    - [GitHub Instructions](#github-instructions)
     </details></li>
     </ul>
 </details>
@@ -122,6 +114,115 @@
     - [Content](#content)
     - [Contact](#contact)
 </details>
+
+## Table of Contents
+1. <details open>
+    <summary><a href="#ux">UX</a></summary>
+
+    <ul>
+    <li><details>
+    <summary><a href="#goals">Goals</a></summary>
+
+    - [Visitor Goals](#visitor-goals)
+    - [Business Goals](#business-goals)
+    - [User Stories](#user-stories)
+    </details></li>
+
+    <li><details>
+    <summary><a href="#visual-design">Visual Design</a></summary>
+
+    - [Wireframes](#wireframes)
+    - [Fonts](#fonts)
+    - [Icons](#icons)
+    - [Colors](#colors)
+    - [Images](#images)
+    - [Styling](#styling)
+    </details></li>
+    </ul>
+</details>
+
+2. <details open>
+    <summary><a href="#features">Features</a></summary>
+
+    <ul>
+    <li><details>
+    <summary><a href="#page-elements">Page Elements</a></summary>
+
+    - [All Pages](#all-pages)
+    - [Index Page](#index-page)
+    - [Gallery Page](#gallery-page)
+    - [Contact Page](#contact-page)
+    </details></li>
+
+    <li><details>
+    <summary><a href="#feature-ideas">Feature Ideas</a></summary>
+
+    - [Basic](#basic)
+    - [Content](#content)
+    </details></li>
+    </ul>
+</details>
+
+3. <details open>
+    <summary><a href="#technologies-used">Technologies Used</a></summary>
+
+    - [Languages](#languages)
+    - [Frameworks](#frameworks)
+    - [Libraries](#libraries)
+    - [APIs](#apis)
+    - [Platforms](#platforms)
+    - [Other Tools](#other-tools)
+</details>
+
+4. <details open>
+    <summary><a href="#testing">Testing</a></summary>
+
+    <ul>
+    <li><details>
+    <summary><a href="#methods">Methods</a></summary>
+
+    - [Validation](#validation)
+    - [General Testing](#general-testing)
+    - [Mobile Testing](#mobile-testing)
+    - [Desktop Testing](#desktop-testing)
+    </details></li>
+
+    <li><details>
+    <summary><a href="#bugs">Bugs</a></summary>
+
+    - [Known Bugs](#known-bugs)
+    - [Fixed Bugs](#fixed-bugs)
+    </details></li>
+    </ul>
+</details>
+
+5. <details open>
+    <summary><a href="#deployment">Deployment</a></summary>
+
+    <ul>
+    <li><details>
+    <summary><a href="#local-deployment">Local Deployment</a></summary>
+
+    - [Local Preparation](#local-preparation)
+    - [Local Instructions](#local-instructions)
+    </details></li>
+
+    <li><details>
+    <summary><a href="#github-deployment">GitHub Deployment</a></summary>
+
+    - [GitHub Preparation](#github-preparation)
+    - [GitHub Instructions](#github-instructions)
+    </details></li>
+    </ul>
+</details>
+
+6. <details open>
+    <summary><a href="#credit-and-contact">Credit and Contact</a></summary>
+
+    - [Content](#content)
+    - [Contact](#contact)
+</details>
+
 
 ----
 
@@ -194,7 +295,7 @@ The wireframes were done using [wirify](https://www.wirify.com/)
 </div>
 
 - Icons are taken from the [Fontawesome](https://fontawesome.com/) Icon library.
-- Icons are utilised in the footer for social account icons and for now only lead to the main social media website.
+- Icons are utilized in the footer for social account icons and for now only lead to the main social media website.
 
 ### Colors
 <div align="center">
@@ -202,7 +303,7 @@ The wireframes were done using [wirify](https://www.wirify.com/)
 </div>
 
 - I wanted the site to maintain a minimal and dark aesthetic, colors pop on the black background but remain, clean to highlight the content of the images and text.
-- The primary color used is rich black, avoiding the designers bane of full black. This is used to create a comfortable veiwing experiance I have come to personally love. This not only helps to ease strain on the eyes but draw them directly from the logo to the content. This removes distraction, a common practice in theatre, cinemas, etc. White is often used in galleries but has more to do with lighting and reflection. On most computer screens, wherein the light is emitted from the screen, black is a better choice.
+- The primary color used is rich black, avoiding the designers bane of full black. This is used to create a comfortable viewing experience I have come to personally love. This not only helps to ease strain on the eyes but draw them directly from the logo to the content. This removes distraction, a common practice in theatre, cinemas, etc. White is often used in galleries but has more to do with lighting and reflection. On most computer screens, wherein the light is emitted from the screen, black is a better choice.
 - Two accent colors were chosen, the blue to give a welcoming introduction and red to make the color contrast as well as make unmistakable the button highlights. These color choices are necessary to have an impact and lead the reader on this dark background.
 - Text is primarily written in off-white to contrast on the dark color backgrounds of the primary and accent colors.
 
@@ -211,19 +312,19 @@ The wireframes were done using [wirify](https://www.wirify.com/)
   <img src="static/images/homepage.png" alt="Images">
 </div>
 
-- The site has a heavy focus on blogs, using full-size quality images to draw in th veiwer.
+- The site has a heavy focus on blogs, using full-size quality images to draw in th viewer.
 - In the main gallery, blogs are displayed in three columns responsively, so they can easily be seen on any size device.
 - Clicking on a blog will open up a full-page modal that displays the image alongside the blog content, in detail.
-- The image and text will automatically space themselves vertically within the column, so the blog remains reable.
+- The image and text will automatically space themselves vertically within the column, so the blog remains readable.
 
 ### Styling
 <div align="center">
   <img src="static/images/postpage.png" alt="Images">
 </div>
-- For this project I have utilised Bootstrap 5.3 source files to override their class defaults to my liking, making customisation much easier. The entire site can be restyled with a single switch in the code.
-- Utilizing CSS, all images on the home page have rounded corners on the top, providing a comfortable enterance to the page, contrast to the harsh and often unappealing nature of sharp corners.
-- As the site has a beeline focus on use, links on each page are re-used to direct the user to eitherthe home page for other blogs or the collaberation page.
-- Interactivity is paramount to any blog and as such, comments are spread and easially accessable to logged in users, providing a place to share thoughts and exchange opinions.
+- For this project I have utilized Bootstrap 5.3 source files to override their class defaults to my liking, making customization much easier. The entire site can be restyled with a single switch in the code.
+- Utilizing CSS, all images on the home page have rounded corners on the top, providing a comfortable entrance to the page, contrast to the harsh and often unappealing nature of sharp corners.
+- As the site has a beeline focus on use, links on each page are re-used to direct the user to either the home page for other blogs or the collaboration page.
+- Interactivity is paramount to any blog and as such, comments are spread and easily accessible to logged in users, providing a place to share thoughts and exchange opinions.
 
 ----
 ## Entity-Relationship Diagram (ERD)
@@ -261,7 +362,7 @@ The database created follows a Django-based structure with authentication, user 
   <img src="static/images/smallnav.png" alt="Small Header">
 </div>
 
-- The Navbar is simple but striking, providing 6 options aiming to provide multiple functionality to the userwhile still attempting to maintain the minimalist style.
+- The Navbar is simple but striking, providing 6 options aiming to provide multiple functionality to the user while still attempting to maintain the minimalist style.
 - The Logo is highlighted with a small red accent to make it pop, swapping position as necessary depending on device size.
 - On smaller devices, the menu becomes collapsible.
 - The mobile nav button has been placed to the right for ease of use with one hand.
@@ -326,12 +427,12 @@ The database created follows a Django-based structure with authentication, user 
 - Ensures only registered users can interact with content.
 
 
-#### Collaberation page
+#### collaboration page
 <div align="center">
-  <img src="static/images/collab.png" alt="collaberation page">
+  <img src="static/images/collab.png" alt="collaboration page">
 </div>
 
-- The collaberaiton page allows useres to provide a message and their details to ask to collaberate with the website blog author.
+- The collaboration page allows users to provide a message and their details to ask to collaborate with the website blog author.
 
 ### Subscription page
 <div align="center">
@@ -349,9 +450,9 @@ The database created follows a Django-based structure with authentication, user 
 
 ## Feature Ideas
 ### Basic
-- All links are placeholders for now, leading to the socal page. For this blog to be fully function social pages would nee to be made and linked
-- The ability to reply to indevidual comments to create a thread type discussion would be very good for interactivity
-- Some kind of monitization in terms of newsletter content or behind the scenes.
+- All links are placeholders for now, leading to the social page. For this blog to be fully function social pages would nee to be made and linked
+- The ability to reply to individual comments to create a thread type discussion would be very good for interactivity
+- Some kind of monetization in terms of newsletter content or behind the scenes.
 - Generally the style if good, but could do with an actual designer.
 
 
@@ -370,12 +471,12 @@ The database created follows a Django-based structure with authentication, user 
 
 ## Frameworks
 - [Django](https://www.djangoproject.com/)
-    * Used as a high-level Python framework, enabeling rapid development.
+    * Used as a high-level Python framework, enabling rapid development.
 - [Bootstrap](https://getbootstrap.com/)
     * Used for its easy nav-bar and button styling.
 
 ## Libraries
- Many Libraries were used, with the most prominant listed here. A full list of libraries can be found in requirements.txt
+ Many Libraries were used, with the most prominent listed here. A full list of libraries can be found in requirements.txt
 
 - [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
     * Integrated set of Django applications addressing authentication, registration, account management, and third party (social) account authentication.
@@ -433,7 +534,7 @@ The database created follows a Django-based structure with authentication, user 
 - Performance was tested via [Pagespeed](https://pagespeed.web.dev/)
     Best Practices are lower due to HTTPS not being implemented. Otherwise the site passes perfectly.
     <div align="center">
-        <img src="static/images/accessable.png" alt="collaberation page">
+        <img src="static/images/accessible.png" alt="collaboration page">
     </div>
 
 - HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/).
@@ -456,11 +557,11 @@ The database created follows a Django-based structure with authentication, user 
     - about/urls.py [All clear, no errors found]
     - about/models.py [All clear, no errors found]
     - about/forms.py [All clear, no errors found]
-    - about/veiws.py [All clear, no errors found]
+    - about/views.py [All clear, no errors found]
     - about/apps.py [All clear, no errors found]
 
     - blog/urls.py [All clear, no errors found]
-    - blog/veiws.py [All clear, no errors found]
+    - blog/views.py [All clear, no errors found]
     - blog/models.py [All clear, no errors found]
     - blog/admin.py [All clear, no errors found]
     - blog/apps.py [All clear, no errors found]
@@ -482,12 +583,12 @@ The database created follows a Django-based structure with authentication, user 
 - Image upload functions have been tested with different formats and sizes.
 - External links open in a new tab. Also being tested on multiple devices on multiple browsers.
 - Attempts at accessing the admin page have tested; when altering the url.
-- Attempts attempts at altering other users comments through url manipulation are not possibel.
+- Attempts attempts at altering other users comments through url manipulation are not possible.
 
 ### Mobile Testing
 - I tested the site personally on my Android device, going through every function; checking buttons, forms, logging in/out, etc. I was personally unable to test on iOS.
 - The site was sent to friends and relatives for them to follow the same process. They have tested on their devices, including iOS.
-- Duckduckgo was utilised to inspect the site in mobile format, going through the pages and functions.
+- Duckduckgo was utilized to inspect the site in mobile format, going through the pages and functions.
 
 ### Desktop Testing
 - The site was developed on a Thinkpad and the majority of testing occurred through Firefox.
@@ -501,7 +602,7 @@ The database created follows a Django-based structure with authentication, user 
 
 ### Fixed Bugs
 - contrast on dark background was not high enough for accessability and was changed to a bright text on darker background
-- Comments were not accessable from the admin page, fixed by connecting the comments via adding to the urls
+- Comments were not accessible from the admin page, fixed by connecting the comments via adding to the urls
 - Delete comment confirmation was not visible. Fixed by adding text-black to the content.
 - The subscribe button was throwing errors and breaking the entire website when a link was added. This was fixed by removing the 'a' tag and replacing it with a form and an action= instead of an href. 
 - Many more bugs were fixed but non as largely breaking as the ones above.
@@ -554,14 +655,14 @@ The database created follows a Django-based structure with authentication, user 
 6. Enjoy!
 
 ## Online via Heroku
-You can veiw the active site via the following Herkou link [here](https://le-engineer-cb388e5b5656.herokuapp.com/)
+You can view the active site via the following Herkou link [here](https://le-engineer-cb388e5b5656.herokuapp.com/)
 
 
 ## Credits and Contact
 ### Content
 Nearly all text content was generated by the AI, GPT-4.
 All images are not mine and were downloaded from google.
-Any code utilised from a site is documented and credited within the code.
+Any code utilized from a site is documented and credited within the code.
 All photographs, authors, license rights, copyright, etc. used in this project are for educational use only and no claim is made.
 
 ### Contact
