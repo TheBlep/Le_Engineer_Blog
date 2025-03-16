@@ -601,7 +601,7 @@ The database created follows a Django-based structure with authentication, user 
 - Currently not fully set up for newsletters. This would require an email setup.
 
 ### Fixed Bugs
-- contrast on dark background was not high enough for accessability and was changed to a bright text on darker background
+- Contrast on dark background was not high enough for accessability and was changed to a bright text on darker background
 - Comments were not accessible from the admin page, fixed by connecting the comments via adding to the urls
 - Delete comment confirmation was not visible. Fixed by adding text-black to the content.
 - The subscribe button was throwing errors and breaking the entire website when a link was added. This was fixed by removing the 'a' tag and replacing it with a form and an action= instead of an href. 
